@@ -1,7 +1,7 @@
-# 📋 Customs Broker Exam Quick Reference Cheat Sheet
+# 📋 Customs Broker Exam Quick Reference
 ## Bagel's Customs Academy 🐕
 
-*Print this and keep it handy while studying!*
+**CRITICAL RULE: Trust the CFR and HTSUS, not your experience.**
 
 ---
 
@@ -11,325 +11,394 @@
 |------|---------|
 | **Questions** | 80 multiple-choice |
 | **Time** | 4.5 hours (270 minutes) |
-| **Time/Question** | ~3.4 minutes |
-| **Passing Score** | 75% (60 correct) |
-| **Format** | Open book (HTSUS + 19 CFR) |
-| **Pass Rate** | 10-30% typically |
+| **Passing** | 75% (60 correct) |
+| **Format** | Open book (HTSUS + 19 CFR ONLY) |
+| **Pass Rate** | 10-30% |
 
 ---
 
 ## 📖 QUESTION BREAKDOWN
 
-| Category | Questions | Topics |
-|----------|-----------|--------|
-| **Broker Compliance** | 1-15 (15q) | Part 111, broker duties, penalties |
-| **Practical Exercise** | 16-20 (5q) | Scenario-based, multi-part |
-| **Modernized Drawback** | 21-25 (5q) | Claims, types, substitution |
-| **Classification** | 26-40 (15q) | GRIs, HTSUS, tariff codes |
-| **Entry/Entry Summary** | 41-65 (25q) | Documentation, bonds, procedures |
-| **Valuation & Duty** | 66-80 (15q) | Appraisement methods, calculations |
+| Category | Questions | What to Study |
+|----------|-----------|---------------|
+| **Broker Compliance** | 1-15 | 19 CFR Part 111 (read 5+ times) |
+| **Practical Exercise** | 16-20 | Scenario-based, use CFR/HTSUS |
+| **Modernized Drawback** | 21-25 | 19 CFR Part 190 |
+| **Classification** | 26-40 | HTSUS + GRIs (apply in order!) |
+| **Entry/Entry Summary** | 41-65 | 19 CFR Parts 141-142 |
+| **Valuation** | 66-80 | 19 CFR Part 152 (methods in order!) |
 
 ---
 
-## 🔑 CRITICAL 19 CFR SECTIONS
+## 🔑 19 CFR PART 111 (MOST TESTED)
 
-### Part 111 - Customs Brokers (MOST IMPORTANT!)
-- **§ 111.23** - Responsible supervision and control
-- **§ 111.28** - Revocation or suspension of license
-- **§ 111.29** - Grounds for suspension/revocation
-- **§ 111.30** - Notification of change in partnership
-- **§ 111.36** - Relationships with unlicensed persons ⭐
-- **§ 111.45** - Records to be kept
-- **§ 111.53** - Triennial status report
+**Read this part until you can find any section in 30 seconds.**
 
-### Part 141 - Entry of Merchandise
-- **§ 141.4** - Entry and entry summary documentation
-- **§ 141.61** - Completion of entry ⭐
-- **§ 141.69** - Release of merchandise
-- **§ 141.90** - Invoice requirements
-
-### Part 142 - Entry Process
-- **§ 142.3** - Entry summary documentation ⭐
-- **§ 142.16** - Estimated duties
-- **§ 142.17** - Deposit of estimated duties
-
-### Part 152 - Classification and Appraisement
-- **§ 152.103** - Transaction value (PRIMARY!) ⭐⭐⭐
-- **§ 152.104** - Transaction value of identical merchandise
-- **§ 152.105** - Deductive value
-- **§ 152.106** - Computed value
-- **§ 152.107** - Value when other methods fail
-
-### Part 134 - Country of Origin Marking
-- **§ 134.1** - Marking requirements
-- **§ 134.35** - Usual container
-- **§ 134.41** - Marking of containers or holders
-
-### Part 113 - Customs Bonds
-- **§ 113.62** - Basic importation and entry bond
-- **§ 113.63** - Basic custodial bond
-
-### Part 171 - Fines, Penalties, Forfeitures
-- **§ 171.12** - Criteria for determining penalties
-- **§ 171.13** - Supplemental petition procedures
-
-⭐ = Frequently tested | ⭐⭐⭐ = VERY frequently tested
+| Section | Topic | Why It Matters |
+|---------|-------|----------------|
+| **§ 111.23** | Responsible supervision | Broker's duty to supervise |
+| **§ 111.28** | Revocation/suspension | When license can be revoked |
+| **§ 111.29** | Grounds for revocation | Specific violations |
+| **§ 111.30** | Notification of change | Partnership changes |
+| **§ 111.36** | Unlicensed persons | Referral fees, relationships |
+| **§ 111.45** | Records to be kept | What, how long (5 years) |
+| **§ 111.53** | Triennial status report | Every 3 years |
 
 ---
 
 ## 📏 GENERAL RULES OF INTERPRETATION (GRIs)
 
-### GRI 1 - Classification by Heading
-- Determined by heading terms and section/chapter notes
-- Most important rule - always start here
+**APPLY IN ORDER. DO NOT SKIP AHEAD.**
+
+### GRI 1 - Start Here Always
+Classification determined by:
+- Heading terms
+- Section notes
+- Chapter notes
 
 ### GRI 2 - Incomplete/Unfinished Articles
-- **2(a)**: Incomplete/unfinished = complete/finished if has essential character
-- **2(b)**: Mixtures/combinations of materials = material giving essential character
+- **2(a)**: Incomplete = complete if has essential character
+- **2(b)**: Mixtures = material giving essential character
 
-### GRI 3 - Multiple Headings
-Apply in order:
+### GRI 3 - Multiple Headings (Apply in Order)
 - **3(a)**: Most specific description wins
 - **3(b)**: Essential character determines classification
 - **3(c)**: Heading last in numerical order wins
 
 ### GRI 4 - Most Akin To
-- Used when GRIs 1-3 don't work
-- Classify with goods most akin to
+Use only when GRIs 1-3 don't work
 
-### GRI 5 - Containers and Packing
-- Containers suitable for repetitive use = classified separately
-- Packing materials/containers for specific goods = classified with goods
+### GRI 5 - Containers & Packing
+- Reusable containers = classified separately
+- Single-use packing = classified with goods
 
-### GRI 6 - Subheading Classification
-- Apply GRIs 1-5 to subheadings within same heading
-- Only compare subheadings at same level
+### GRI 6 - Subheadings
+Apply GRIs 1-5 to subheadings within same heading
 
-**REMEMBER**: Apply GRIs in order! Don't skip ahead.
+**CRITICAL**: Don't jump to GRI 3 because it "seems right." Start with GRI 1.
 
 ---
 
-## 💰 VALUATION METHODS (IN ORDER!)
+## 💰 VALUATION METHODS (19 CFR PART 152)
 
-Must be applied in this sequence:
+**MUST BE APPLIED IN THIS ORDER. YOU CANNOT SKIP.**
 
-### 1. Transaction Value (§ 152.103) ⭐⭐⭐
-**Price actually paid or payable** for merchandise when sold for export to US
+### 1. Transaction Value (§ 152.103) - PRIMARY
+**Price actually paid or payable**
 
-**Includes:**
+**INCLUDES**:
 - Packing costs
-- Selling commissions paid by buyer
 - Assists (tools, dies, molds provided by buyer)
-- Royalties and license fees (if condition of sale)
-- Proceeds of subsequent resale (if accrue to seller)
+- Royalties/license fees (if condition of sale)
+- Proceeds of resale (if accrue to seller)
 
-**Excludes:**
+**EXCLUDES**:
 - International freight
 - US duties and taxes
 - Buying commissions
-- Installation/assembly after importation
+- Installation after importation
 
-### 2. Transaction Value of Identical Merchandise (§ 152.104)
-- Same in all respects (physical characteristics, quality, reputation)
-- Produced in same country
-- By same person (or if not available, by different person)
+### 2. Identical Merchandise (§ 152.104)
+Same in all respects, same country, same producer
 
-### 3. Transaction Value of Similar Merchandise
-- Closely resembles in component materials and characteristics
-- Commercially interchangeable
-- Produced in same country
+### 3. Similar Merchandise
+Closely resembles, commercially interchangeable
 
 ### 4. Deductive Value (§ 152.105)
-**Resale price in US minus:**
-- Commissions or profit and general expenses
-- Transportation/insurance costs in US
-- Customs duties and federal taxes
+Resale price MINUS:
+- Commissions/profit/expenses
+- US transportation/insurance
+- Customs duties/federal taxes
 
 ### 5. Computed Value (§ 152.106)
-**Sum of:**
-- Materials, fabrication, and processing
-- Profit and general expenses
-- Assists (if not included above)
-- Packing costs
+Materials + fabrication + profit + assists + packing
 
-### 6. Fallback Method (§ 152.107)
-- Use reasonable means consistent with principles of methods 1-5
-- Based on available data in US
+### 6. Fallback (§ 152.107)
+Reasonable method consistent with methods 1-5
 
-**CRITICAL**: Methods must be tried in order. Can't skip to method 5!
+**CRITICAL**: Cannot use computed value if transaction value is available.
 
 ---
 
-## ⏰ IMPORTANT TIME LIMITS
+## ⏰ TIME LIMITS
 
-| Action | Time Limit | Reference |
-|--------|------------|-----------|
+| Action | Time Limit | CFR |
+|--------|------------|-----|
 | **Entry filing** | 15 calendar days from arrival | 19 CFR 142.3 |
 | **Entry summary** | 10 working days from release | 19 CFR 142.3 |
-| **Protest filing** | 180 days from liquidation/decision | 19 USC 1514 |
-| **Drawback claim** | 5 years from date of importation | 19 USC 1313 |
-| **Recordkeeping** | 5 years from entry date | 19 CFR 163.4 |
-| **Liquidation** | 314 days from entry (1 year max with extensions) | 19 USC 1504 |
+| **Protest** | 180 days from liquidation | 19 USC 1514 |
+| **Drawback claim** | 5 years from importation | 19 USC 1313 |
+| **Recordkeeping** | 5 years from entry | 19 CFR 163.4 |
 
 ---
 
-## 📦 ENTRY TYPES QUICK REFERENCE
+## 📦 KEY CFR SECTIONS BY TOPIC
 
-| Entry Type | Purpose | Bond Required? |
-|------------|---------|----------------|
-| **Consumption Entry** | Immediate entry for consumption | Yes |
-| **Warehouse Entry** | Store in bonded warehouse | Yes |
-| **TIB (Temporary Importation Bond)** | Temporary import, will re-export | Yes (usually 200% of duties) |
-| **FTZ (Foreign Trade Zone)** | Entry into FTZ | No (until removed) |
-| **Immediate Delivery** | Quick release, entry summary later | Yes |
-| **Mail Entry** | Postal imports | Varies |
+### Entry Procedures (Questions 41-65)
+- **19 CFR § 141.4** - Entry and entry summary documentation
+- **19 CFR § 141.61** - Completion of entry (15 days)
+- **19 CFR § 141.69** - Release of merchandise
+- **19 CFR § 142.3** - Entry summary (10 working days)
 
----
+### Valuation (Questions 66-80)
+- **19 CFR § 152.103** - Transaction value (PRIMARY)
+- **19 CFR § 152.104** - Identical merchandise
+- **19 CFR § 152.105** - Deductive value
+- **19 CFR § 152.106** - Computed value
+- **19 CFR § 152.107** - Fallback
 
-## 🎯 EXAM DAY STRATEGY
-
-### Time Management
-- **First 90 min**: Answer all easy questions (✓)
-- **Next 90 min**: Tackle moderate questions (M)
-- **Next 60 min**: Work on hard questions (H)
-- **Final 30 min**: Review and check answers
-
-### Question Approach
-1. Read question carefully (watch for EXCEPT, NOT, ALWAYS)
-2. Eliminate obviously wrong answers
-3. Use reference materials if needed
-4. Mark difficult questions and move on
-5. Never leave blanks (no penalty for guessing)
-
-### Reference Material Tips
-- Use your tabs efficiently
-- Don't waste time flipping pages
-- Know where key sections are located
-- Practice finding information quickly
+### Other Important Parts
+- **19 CFR Part 113** - Customs Bonds
+- **19 CFR Part 134** - Country of Origin Marking
+- **19 CFR Part 163** - Recordkeeping
+- **19 CFR Part 171** - Fines, Penalties, Forfeitures
+- **19 CFR Part 190** - Modernized Drawback
 
 ---
 
-## ❌ COMMON MISTAKES TO AVOID
+## ⏱️ EXAM DAY TIME STRATEGY
 
-1. ❌ **Over-tabbing** - Too many tabs = confusion
-2. ❌ **Not practicing** - Take 5-10 full practice exams minimum
-3. ❌ **Large study groups** - Stick to 1-2 partners max
-4. ❌ **Procrastinating** - Start 3-6 months early
-5. ❌ **Memorizing everything** - It's open book! Focus on WHERE to find info
-6. ❌ **Ignoring weak areas** - Address weaknesses early
-7. ❌ **Not reading carefully** - Watch for key words in questions
-8. ❌ **Spending too long on one question** - Skip and return
+### Three-Pass Approach (270 minutes total)
 
----
+**Pass 1 (90 min)**: Answer what you know
+- Part 111 questions (should be fast)
+- Easy classification/valuation
+- Mark hard questions "H"
 
-## 📚 ESSENTIAL RESOURCES
+**Pass 2 (90 min)**: Use your references
+- Classification requiring HTSUS
+- Valuation requiring Part 152
+- Entry requiring Parts 141-142
+- Practical exercise (read carefully)
 
-### Official CBP (FREE)
-- **Past Exams**: https://www.cbp.gov/document/publications/past-customs-broker-license-examinations-answer-keys
-- **HTSUS**: https://hts.usitc.gov/
-- **19 CFR**: https://www.ecfr.gov/current/title-19
-- **Registration**: https://www.cbp.gov/trade/programs-administration/customs-brokers
+**Pass 3 (60 min)**: Hard questions
+- Questions marked "H"
+- Multiple lookups needed
+- Complex fact patterns
 
-### Study Tools
-- **Bagel's Customs Academy**: https://bagelacademy.github.io/bagels-customs-academy/
-  - 293 real exam questions
-  - Three study modes
-  - Timer and analytics
-  - FREE! 🐕
+**Final Review (30 min)**: Check everything
+- Make sure nothing is blank
+- Don't second-guess too much
 
 ---
 
-## 🎓 TABBING CHECKLIST
+## 🎯 HOW TO USE YOUR REFERENCES
 
-### HTSUS Tabs
+### For CFR Questions:
+1. Identify which Part (use your tabs)
+2. Find the section quickly
+3. Read the EXACT text
+4. Match text to answer choices
+5. Don't paraphrase or interpret
+
+### For Classification Questions:
+1. Read product description carefully
+2. Start with GRI 1 (always)
+3. Check headings and notes
+4. Apply GRIs in order
+5. Verify your answer
+
+### For Valuation Questions:
+1. Start with transaction value (§ 152.103)
+2. Check what's included/excluded
+3. Only move to next method if first doesn't work
+4. Calculate if needed
+5. Check your work
+
+---
+
+## ❌ COMMON TRAPS
+
+### Watch For These Words:
+- **EXCEPT** - all are correct EXCEPT one
+- **NOT** - looking for false statement
+- **ALWAYS** - absolute (usually wrong)
+- **MAY** vs **MUST** - big difference
+
+### Don't Do This:
+- ❌ Answer from work experience
+- ❌ Answer from "common sense"
+- ❌ Skip reading the CFR
+- ❌ Apply GRIs out of order
+- ❌ Skip valuation methods
+
+### Do This:
+- ✅ Find exact CFR section
+- ✅ Read what it actually says
+- ✅ Apply GRIs in order
+- ✅ Apply valuation methods in order
+- ✅ Trust regulations, not experience
+
+---
+
+## 📚 TABBING CHECKLIST
+
+### 19 CFR (Major Parts Only)
+- ☐ Part 111 (Customs Brokers) - RED
+- ☐ Part 113 (Customs Bonds) - ORANGE
+- ☐ Part 134 (Country of Origin) - YELLOW
+- ☐ Part 141 (Entry of Merchandise) - GREEN
+- ☐ Part 142 (Entry Process) - BLUE
+- ☐ Part 152 (Valuation) - PURPLE
+- ☐ Part 163 (Recordkeeping) - PINK
+- ☐ Part 171 (Penalties) - BROWN
+- ☐ Part 190 (Drawback) - GRAY
+
+### Within Part 111 (Tab These Sections)
+- ☐ § 111.23, § 111.28, § 111.29
+- ☐ § 111.30, § 111.36, § 111.45, § 111.53
+
+### Within Part 152 (Tab These Sections)
+- ☐ § 152.103 (Transaction value)
+- ☐ § 152.104-107 (Other methods)
+
+### HTSUS
 - ☐ General Notes
-- ☐ General Rules of Interpretation (GRIs 1-6)
-- ☐ All 22 sections
-- ☐ Key chapters (61-63, 84-85, 87, 98, 99)
-- ☐ Appendices
+- ☐ General Rules of Interpretation (GRIs)
+- ☐ All 22 Sections
+- ☐ Key Chapters: 61-63, 84-85, 87, 98, 99
 
-### 19 CFR Tabs
-- ☐ Part 111 (Customs Brokers) - MOST IMPORTANT
-- ☐ Part 113 (Customs Bonds)
-- ☐ Part 134 (Country of Origin Marking)
-- ☐ Part 141 (Entry of Merchandise)
-- ☐ Part 142 (Entry Process)
-- ☐ Part 152 (Classification and Appraisement)
-- ☐ Part 163 (Recordkeeping)
-- ☐ Part 171 (Fines, Penalties, Forfeitures)
+**Don't over-tab. Too many tabs = confusion.**
 
 ---
 
-## 🔢 QUICK MATH FORMULAS
+## 🔢 QUICK MATH
 
 ### Deductive Value
 ```
 Resale Price
-- Commissions/Profit/General Expenses
+- Commissions/Profit/Expenses
 - US Transportation/Insurance
-- Customs Duties/Federal Taxes
+- Customs Duties/Taxes
 = Deductive Value
 ```
 
 ### Computed Value
 ```
 Materials + Fabrication + Processing
-+ Profit + General Expenses
-+ Assists (if not included)
-+ Packing Costs
++ Profit + Expenses
++ Assists
++ Packing
 = Computed Value
 ```
 
 ### Ad Valorem Duty
 ```
-Duty = Customs Value × Duty Rate
+Duty = Value × Rate
 Example: $10,000 × 5% = $500
 ```
 
 ---
 
-## 💡 LAST-MINUTE TIPS
+## 💡 STUDY STRATEGY
 
-### Night Before
-- ✅ Get 7-8 hours sleep
-- ✅ Prepare materials (HTSUS, CFR, calculator, pencils)
-- ✅ Review this cheat sheet
-- ❌ Don't cram new material
+### What You Need:
+- ✅ Current year HTSUS
+- ✅ Current year 19 CFR
+- ✅ 12 weeks of study (2-3 hrs/day)
+- ✅ 10+ practice exams
+- ✅ Discipline
 
-### Exam Day
-- ✅ Arrive 30 minutes early
-- ✅ Bring photo ID
-- ✅ Eat good breakfast
-- ✅ Use restroom before exam
-- ✅ Stay calm and focused
+### What You Don't Need:
+- ❌ Expensive courses ($500-2,000)
+- ❌ Study groups
+- ❌ Textbooks
+- ❌ Flashcards
 
-### During Exam
-- ✅ Read ALL instructions
-- ✅ Manage time (3.4 min/question)
-- ✅ Answer easy questions first
-- ✅ Use reference materials
-- ❌ Don't panic if others finish early
-- ❌ Don't leave blanks
-
----
-
-## 🏆 YOU'VE GOT THIS!
-
-**Remember:**
-- 75% to pass (60 out of 80)
-- Open book exam
-- You've prepared for this
-- Trust your knowledge
-- Stay calm and focused
-
-**Good luck! 🎉🐕**
+### 12-Week Plan:
+- **Weeks 1-2**: Master Part 111
+- **Weeks 3-4**: Master GRIs/Classification
+- **Weeks 5-6**: Master Part 152/Valuation
+- **Weeks 7-8**: Master Parts 141-142/Entry
+- **Weeks 9-10**: Cover remaining + practice
+- **Weeks 11-12**: Practice exams only (1 every other day)
 
 ---
 
-*Bagel's Customs Academy - Where Good Dogs Help You Pass the Broker Exam 🐕*
+## 📝 PRACTICE EXAM STRATEGY
 
-**Built with ❤️ by eswanson**
+### Where to Get Them (FREE):
+1. **CBP Past Exams**: https://www.cbp.gov/document/publications/past-customs-broker-license-examinations-answer-keys
+2. **Bagel's Academy**: https://bagelacademy.github.io/bagels-customs-academy/
+
+### How to Use Them:
+- Take 10+ full exams (4.5 hours each)
+- Use HTSUS and CFR during practice
+- Review EVERY wrong answer
+- Find the exact CFR/HTSUS citation
+- Track your weak areas
+- Focus study on weakest topics
+
+### Goal:
+Consistently score 75%+ by week 12
 
 ---
 
-**Print this cheat sheet and keep it visible while studying!**
+## 🚫 WHY PEOPLE FAIL
+
+1. **Answering from experience** instead of CFR
+2. **Not reading the actual CFR** during exam
+3. **Skipping practice exams** (need 10+ minimum)
+4. **Over-tabbing** (confusion instead of clarity)
+5. **Not applying GRIs in order** (shortcuts fail)
+6. **Skipping valuation method steps** (must go in order)
+7. **Not reading questions carefully** (missing EXCEPT/NOT)
+8. **Starting too late** (need 12 weeks minimum)
+
+---
+
+## ✅ EXAM DAY CHECKLIST
+
+### Night Before:
+- ☐ 7-8 hours sleep (no cramming)
+- ☐ Pack: HTSUS, CFR, calculator, pencils, ID
+- ☐ Check tabs (nothing fell off)
+- ☐ Good dinner
+- ☐ NO new material
+
+### Morning:
+- ☐ Good breakfast
+- ☐ Arrive 30 min early
+- ☐ Photo ID + confirmation
+- ☐ Use restroom before start
+- ☐ Dress in layers
+
+### During:
+- ☐ Read ALL instructions
+- ☐ Manage time (check every 20 questions)
+- ☐ Use references (that's why it's open book)
+- ☐ Mark hard questions, return later
+- ☐ Check all answers if time permits
+- ☐ NO BLANKS (guess if needed)
+
+---
+
+## 🎓 THE BOTTOM LINE
+
+**The exam tests ONE thing**: Can you find and apply the correct regulation?
+
+**To pass**:
+1. Read the CFR (boring but necessary)
+2. Take 10+ practice exams
+3. Trust regulations, not experience
+4. Apply GRIs in order
+5. Apply valuation methods in order
+6. Find information quickly
+
+**If you can do that, you will pass.**
+
+---
+
+## 📞 FREE RESOURCES
+
+- **Past Exams**: https://www.cbp.gov/document/publications/past-customs-broker-license-examinations-answer-keys
+- **HTSUS**: https://hts.usitc.gov/
+- **19 CFR**: https://www.ecfr.gov/current/title-19
+- **Bagel's Academy**: https://bagelacademy.github.io/bagels-customs-academy/
+- **CBP Contact**: 1-877-CBP-5511 | brokerinfo@cbp.dhs.gov
+
+---
+
+**Read the CFR. Trust the regulations. You've got this.** 🎉🐕
+
+*Bagel's Customs Academy - Built with ❤️ by eswanson*

@@ -1,497 +1,562 @@
-# 📚 Comprehensive Customs Broker Exam Study Guide
+# 📚 Customs Broker Exam Study Guide
 ## Bagel's Customs Academy 🐕
 
 *Last Updated: February 20, 2026*
 
 ---
 
-## 📊 Exam Statistics & Overview
+## ⚠️ CRITICAL MINDSET
 
-### Pass Rates (Recent Exams)
-- **October 2025**: 12% pass rate
-- **April 2025**: 30% pass rate
-- **Historical Average**: 10-30% pass rate
+**FORGET EVERYTHING YOU THINK YOU KNOW ABOUT TRADE.**
 
-### Exam Structure
-- **Total Questions**: 80 multiple-choice
-- **Time Limit**: 4.5 hours (270 minutes)
-- **Time per Question**: ~3.4 minutes average
-- **Passing Score**: 75% (60 correct answers)
-- **Format**: Open book (HTSUS and 19 CFR permitted)
-- **Frequency**: Twice yearly (April & October)
+The exam tests your ability to find and apply information from TWO sources:
+1. **19 CFR** (Code of Federal Regulations)
+2. **HTSUS** (Harmonized Tariff Schedule)
 
-### Question Distribution by Category
-1. **Broker Compliance** (Questions 1-15): 15 questions
-2. **Practical Exercise** (Questions 16-20): 5 questions
-3. **Modernized Drawback** (Questions 21-25): 5 questions
-4. **Classification** (Questions 26-40): 15 questions
-5. **Entry/Entry Summary** (Questions 41-65): 25 questions
-6. **Valuation, Appraisement & Duty** (Questions 66-80): 15 questions
+Your real-world trade experience does NOT matter. The exam is about:
+- **Finding** the right regulation quickly
+- **Reading** what it actually says
+- **Applying** it exactly as written
+
+If you try to answer from experience or "common sense," you will fail.
 
 ---
 
-## 🎯 Key Study Resources
+## 📊 Exam Facts
 
-### Official CBP Resources (FREE)
-1. **Past Exams & Answer Keys**
-   - URL: https://www.cbp.gov/document/publications/past-customs-broker-license-examinations-answer-keys
-   - Use these to practice with real exam questions
+| Item | Details |
+|------|---------|
+| **Questions** | 80 multiple-choice |
+| **Time** | 4.5 hours (270 minutes) |
+| **Passing Score** | 75% (60 correct) |
+| **Format** | Open book (HTSUS + 19 CFR ONLY) |
+| **Pass Rate** | 10-30% (October 2025: 12%, April 2025: 30%) |
+| **Frequency** | Twice yearly (April & October) |
 
-2. **eCBP Broker Resources**
-   - URL: https://www.cbp.gov/trade/eCBP
-   - Includes application guides and quick reference materials
-
-3. **Exam Registration Information**
-   - URL: https://www.cbp.gov/trade/programs-administration/customs-brokers/license-examination-notice-examination/registration-information
-   - Exam dates, fees, and requirements
-
-### Essential Reference Materials (REQUIRED FOR EXAM)
-1. **Harmonized Tariff Schedule (HTSUS)**
-   - URL: https://hts.usitc.gov/
-   - 99 chapters + General Rules of Interpretation (GRIs)
-   - Must be current year's version
-
-2. **Title 19 Code of Federal Regulations (CFR)**
-   - URL: https://www.ecfr.gov/current/title-19
-   - Focus on Parts 111, 141, 142, 152, 171
-   - Must be current year's version
-
-### Commercial Study Programs
-1. **The Customs Broker Exam Prep Course**
-   - URL: https://www.cbprepcourse.com/
-   - Features: Exam guide, 1,000+ practice questions, video library, e-flash cards
-   - Next seminar: April 2-4, 2026
-
-2. **Clear Customs and Trade Solutions**
-   - URL: https://cbleprep.clearcts.com/
-   - Features: Live instructor-led course, weekly roadmap, practice exams with analytics
-   - Spring 2026 course: Feb 4 - April 15, 2026
-
-3. **Virk Trade Compliance Digital Study Guide**
-   - URL: https://virktradecompliance.com/courses/study-guide-us-customs-broker-exam-digital-copy/
-   - Features: Digital guide and cheat sheet covering essential CFR parts
-
-4. **Customs Broker Exam Guide Textbook**
-   - URL: https://www.customsbrokerexamprep.com/textbook/
-   - 488-page textbook with 16 chapters covering all exam topics
-
-5. **LawCustoms Project**
-   - URL: https://www.lawcustoms.com/cbe/
-   - Features: Preparation materials, guidance on organizing study resources
+### Question Distribution
+1. **Broker Compliance** (Q1-15): 15 questions - 19 CFR Part 111
+2. **Practical Exercise** (Q16-20): 5 questions - Scenario-based
+3. **Modernized Drawback** (Q21-25): 5 questions - 19 CFR Part 190
+4. **Classification** (Q26-40): 15 questions - HTSUS + GRIs
+5. **Entry/Entry Summary** (Q41-65): 25 questions - 19 CFR Parts 141-142
+6. **Valuation** (Q66-80): 15 questions - 19 CFR Part 152
 
 ---
 
-## 📖 Critical 19 CFR Sections to Master
+## 🛒 What You Need to Buy
 
-### Part 111 - Customs Brokers (HEAVILY TESTED)
-- **§ 111.23**: Responsible supervision and control
-- **§ 111.28**: Revocation or suspension of license
-- **§ 111.29**: Grounds for suspension or revocation
-- **§ 111.30**: Notification of change in partnership
-- **§ 111.36**: Relationships with unlicensed persons
-- **§ 111.45**: Records to be kept
-- **§ 111.53**: Triennial status report
+### Required Materials (MUST HAVE)
+1. **Current Year HTSUS** (Harmonized Tariff Schedule)
+   - Get from: https://hts.usitc.gov/ (FREE download) OR buy printed version
+   - **MUST be current year's version for your exam**
+   - October exam = current year HTSUS
+   - April exam = current year HTSUS
 
-### Part 141 - Entry of Merchandise
-- **§ 141.4**: Entry and entry summary documentation
-- **§ 141.61**: Completion of entry
-- **§ 141.69**: Release of merchandise
-- **§ 141.90**: Invoice requirements
+2. **Current Year 19 CFR** (Code of Federal Regulations)
+   - Get from: https://www.ecfr.gov/current/title-19 (FREE download) OR buy printed version
+   - **MUST be current year's version for your exam**
+   - You need the FULL Title 19
 
-### Part 142 - Entry Process
-- **§ 142.3**: Entry summary documentation
-- **§ 142.16**: Estimated duties
-- **§ 142.17**: Deposit of estimated duties
+3. **Tabbing Supplies**
+   - Colored sticky tabs (multiple colors)
+   - Clear labels or label maker
+   - Highlighters (optional)
 
-### Part 152 - Classification and Appraisement
-- **§ 152.103**: Transaction value (PRIMARY METHOD)
-- **§ 152.104**: Transaction value of identical merchandise
-- **§ 152.105**: Deductive value
-- **§ 152.106**: Computed value
-- **§ 152.107**: Value when other methods fail
+**Total Cost**: $0-200 depending on whether you print yourself or buy bound copies
 
-### Part 134 - Country of Origin Marking
-- **§ 134.1**: Marking requirements
-- **§ 134.35**: Usual container
-- **§ 134.41**: Marking of containers or holders
+### That's It
+You don't need:
+- ❌ Expensive prep courses ($500-2,000)
+- ❌ Study groups
+- ❌ Textbooks
+- ❌ Flashcards
+- ❌ Videos
 
-### Part 113 - Customs Bonds
-- **§ 113.62**: Basic importation and entry bond
-- **§ 113.63**: Basic custodial bond
-
-### Part 171 - Fines, Penalties, and Forfeitures
-- **§ 171.12**: Criteria for determining administrative penalties
-- **§ 171.13**: Supplemental petition procedures
+You need:
+- ✅ HTSUS (current year)
+- ✅ 19 CFR (current year)
+- ✅ Past exams from CBP (FREE)
+- ✅ Bagel's Academy practice questions (FREE)
+- ✅ Time and discipline
 
 ---
 
-## 🎓 Tabbing Strategy for Reference Materials
+## 📅 Study Timeline: 12 Weeks
 
-### HTSUS Tabbing Strategy
-1. **Section Tabs** (22 sections)
-   - Use colored tabs for each section
-   - Example: Section I (Live Animals), Section XI (Textiles)
+### Weeks 1-2: Setup & Part 111
+**Goal**: Organize materials, master broker compliance
 
-2. **Chapter Tabs** (99 chapters)
-   - Focus on commonly tested chapters:
-     - Chapter 61-63 (Textiles)
-     - Chapter 84-85 (Machinery/Electrical)
-     - Chapter 87 (Vehicles)
-     - Chapter 98 (Special Classification Provisions)
-     - Chapter 99 (Temporary Legislation)
+**Tasks**:
+1. Get HTSUS and 19 CFR (current year versions)
+2. Read 19 CFR Part 111 cover to cover (3 times)
+3. Tab Part 111 (every section)
+4. Take 1 practice exam to establish baseline
 
-3. **Essential Pages**
-   - General Notes (beginning of HTSUS)
-   - General Rules of Interpretation (GRIs 1-6)
-   - Appendices
+**Why Part 111 First**: 
+- Questions 1-15 are ALL Part 111
+- Most heavily tested section
+- Foundation for understanding broker responsibilities
+
+### Weeks 3-4: Classification & GRIs
+**Goal**: Master the 6 General Rules of Interpretation
+
+**Tasks**:
+1. Read GRIs 1-6 in HTSUS (10 times minimum)
+2. Tab HTSUS sections and chapters
+3. Practice 50 classification problems from past exams
+4. Take 1 practice exam focusing on Q26-40
+
+**Critical**: You MUST apply GRIs in order. Don't skip to GRI 3 because it "seems right."
+
+### Weeks 5-6: Valuation (Part 152)
+**Goal**: Master the 6 valuation methods IN ORDER
+
+**Tasks**:
+1. Read 19 CFR Part 152 cover to cover (3 times)
+2. Tab every section in Part 152
+3. Memorize the ORDER of valuation methods (you can't skip)
+4. Practice 30 valuation problems from past exams
+5. Take 1 practice exam focusing on Q66-80
+
+**Critical**: Methods MUST be applied in order. Transaction value first, always.
+
+### Weeks 7-8: Entry Procedures (Parts 141-142)
+**Goal**: Understand entry and entry summary requirements
+
+**Tasks**:
+1. Read 19 CFR Parts 141 and 142 cover to cover (2 times each)
+2. Tab key sections (141.4, 141.61, 141.69, 142.3)
+3. Practice 40 entry/entry summary problems from past exams
+4. Take 1 practice exam focusing on Q41-65
+
+### Weeks 9-10: Remaining Topics
+**Goal**: Cover drawback, marking, bonds
+
+**Tasks**:
+1. Read 19 CFR Part 190 (Drawback) - 2 times
+2. Read 19 CFR Part 134 (Country of Origin Marking) - 2 times
+3. Read 19 CFR Part 113 (Customs Bonds) - 2 times
+4. Tab these sections
+5. Practice 20 problems from each topic
+6. Take 2 full practice exams
+
+### Weeks 11-12: Practice Exams Only
+**Goal**: Build speed and identify weak areas
+
+**Tasks**:
+1. Take 1 practice exam every other day (6 total)
+2. Review EVERY wrong answer - find the exact CFR/HTSUS citation
+3. Re-read sections where you're making mistakes
+4. Final practice exam 2 days before real exam
+5. Light review day before exam (NO NEW MATERIAL)
+
+---
+
+## 🎯 How to Tab Your Materials
 
 ### 19 CFR Tabbing Strategy
-1. **Key Parts**
-   - Part 111 (Customs Brokers) - MOST IMPORTANT
-   - Part 141 (Entry of Merchandise)
-   - Part 142 (Entry Process)
-   - Part 152 (Classification and Appraisement)
-   - Part 171 (Fines, Penalties, Forfeitures)
 
-2. **Frequently Tested Sections**
-   - Mark specific sections within each part
-   - Use sticky notes for quick reference
+**Tab These Parts (Major Tabs)**:
+- Part 111 (Customs Brokers) - RED
+- Part 113 (Customs Bonds) - ORANGE
+- Part 134 (Country of Origin Marking) - YELLOW
+- Part 141 (Entry of Merchandise) - GREEN
+- Part 142 (Entry Process) - BLUE
+- Part 152 (Classification and Appraisement) - PURPLE
+- Part 163 (Recordkeeping) - PINK
+- Part 171 (Fines, Penalties, Forfeitures) - BROWN
+- Part 190 (Modernized Drawback) - GRAY
 
-3. **Appendices**
-   - Tab any appendices or supplementary materials
+**Within Part 111 (Most Important)**:
+- § 111.23 - Responsible supervision
+- § 111.28 - Revocation or suspension
+- § 111.29 - Grounds for suspension/revocation
+- § 111.30 - Notification of change
+- § 111.36 - Relationships with unlicensed persons
+- § 111.45 - Records to be kept
+- § 111.53 - Triennial status report
 
-### Tabbing Best Practices
-- **Use consistent colors**: Same color for related topics
-- **Clear labeling**: Write section/part numbers clearly
-- **Practice navigation**: Regularly practice finding information
-- **Don't over-tab**: Too many tabs = confusion
-- **Update annually**: Ensure materials are current year's version
+**Within Part 152 (Valuation)**:
+- § 152.103 - Transaction value (PRIMARY)
+- § 152.104 - Identical merchandise
+- § 152.105 - Deductive value
+- § 152.106 - Computed value
+- § 152.107 - Fallback method
 
----
+**Don't Over-Tab**: Too many tabs = confusion. Major sections only.
 
-## 💡 Study Strategies That Work
+### HTSUS Tabbing Strategy
 
-### 1. Develop a Structured Study Plan
-- **Timeline**: Start 3-6 months before exam
-- **Daily commitment**: 2-3 hours minimum
-- **Weekly goals**: Complete 1-2 topic areas per week
-- **Track progress**: Use a study log or spreadsheet
+**Tab These**:
+- General Notes (beginning)
+- General Rules of Interpretation (GRIs 1-6)
+- Each Section (22 sections)
+- Key Chapters:
+  - Chapter 61-63 (Textiles)
+  - Chapter 84-85 (Machinery/Electrical)
+  - Chapter 87 (Vehicles)
+  - Chapter 98 (Special Classification Provisions)
+  - Chapter 99 (Temporary Legislation)
 
-### 2. Master the General Rules of Interpretation (GRIs)
-- **GRI 1**: Classification by heading
-- **GRI 2**: Incomplete/unfinished articles
-- **GRI 3**: Multiple headings (most specific, essential character, numerical order)
-- **GRI 4**: Most akin to
-- **GRI 5**: Containers and packing materials
-- **GRI 6**: Subheading classification
-
-**Practice Tip**: Work through 50+ classification problems using GRIs
-
-### 3. Understand Valuation Methods (In Order)
-1. **Transaction Value** (§ 152.103) - PRIMARY METHOD
-2. **Transaction Value of Identical Merchandise** (§ 152.104)
-3. **Transaction Value of Similar Merchandise**
-4. **Deductive Value** (§ 152.105)
-5. **Computed Value** (§ 152.106)
-6. **Fallback Method** (§ 152.107)
-
-**Practice Tip**: Know when each method applies and in what order
-
-### 4. Take Timed Practice Exams
-- **Frequency**: Weekly during last 2 months
-- **Conditions**: Simulate real exam (4.5 hours, open book)
-- **Review**: Analyze both correct AND incorrect answers
-- **Track scores**: Monitor improvement over time
-
-### 5. Study with a Partner (Not a Large Group)
-- **Benefits**: Accountability, discussion, teaching reinforces learning
-- **Avoid**: Large study groups (distractions, inefficiency)
-- **Ideal**: 1-2 study partners maximum
-
-### 6. Focus on Understanding, Not Memorization
-- **Open book exam**: You don't need to memorize everything
-- **Key skill**: Knowing WHERE to find information quickly
-- **Practice**: Navigating HTSUS and CFR efficiently
-
-### 7. Learn from Past Exams
-- **Download**: All available past exams from CBP website
-- **Analyze**: Question patterns, commonly tested topics
-- **Practice**: Work through every question, even if you get it right
+**Practice Navigation**: Spend 30 minutes daily just finding random chapters/headings quickly.
 
 ---
 
-## ⏱️ Time Management During the Exam
+## 📖 Critical Sections to Master
 
-### Pre-Exam Preparation
-- **Arrive early**: 30 minutes before start time
-- **Organize materials**: HTSUS and CFR tabbed and ready
-- **Bring supplies**: Calculator, watch, pencils, erasers
-- **Stay calm**: Deep breathing, positive mindset
+### 19 CFR Part 111 (Questions 1-15)
+**Read this part 5+ times. You should be able to find any section in under 30 seconds.**
 
-### During the Exam (4.5 hours = 270 minutes)
-- **Time per question**: ~3.4 minutes average
-- **First pass** (90 minutes): Answer all easy questions
-- **Second pass** (90 minutes): Tackle moderate difficulty questions
-- **Third pass** (60 minutes): Work on challenging questions
-- **Final review** (30 minutes): Check answers, fill in any blanks
+Most Tested Sections:
+- **§ 111.23** - Responsible supervision and control
+- **§ 111.36** - Relationships with unlicensed persons (referral fees, etc.)
+- **§ 111.45** - Records to be kept (what, how long)
+- **§ 111.53** - Triennial status report
+- **§ 111.28-29** - Grounds for suspension/revocation
 
-### Question Triage Strategy
-1. **Mark questions**: Easy (✓), Moderate (M), Hard (H)
-2. **Answer easy first**: Build confidence and momentum
-3. **Skip and return**: Don't get stuck on one question
-4. **Guess strategically**: Never leave blanks (no penalty for wrong answers)
+### General Rules of Interpretation (Questions 26-40)
+**Memorize these. Apply them IN ORDER.**
 
-### Time-Saving Tips
-- **Use tabs**: Don't waste time flipping through pages
-- **Read carefully**: Many questions have "EXCEPT" or "NOT"
-- **Eliminate options**: Cross out obviously wrong answers
-- **Trust your preparation**: Don't second-guess too much
+1. **GRI 1**: Classification determined by headings and section/chapter notes
+2. **GRI 2(a)**: Incomplete/unfinished articles = complete if has essential character
+3. **GRI 2(b)**: Mixtures = material giving essential character
+4. **GRI 3(a)**: Most specific description wins
+5. **GRI 3(b)**: Essential character determines classification
+6. **GRI 3(c)**: Heading last in numerical order wins
+7. **GRI 4**: Most akin to (rarely used)
+8. **GRI 5**: Containers and packing materials
+9. **GRI 6**: Apply GRIs 1-5 to subheadings
+
+**Common Mistake**: Jumping to GRI 3 without checking GRI 1 and 2 first.
+
+### 19 CFR Part 152 (Questions 66-80)
+**Valuation methods MUST be applied in this order. You cannot skip.**
+
+1. **§ 152.103 - Transaction Value** (PRIMARY METHOD)
+   - Price actually paid or payable
+   - Includes: packing, assists, royalties (if condition of sale)
+   - Excludes: international freight, US duties, buying commissions
+
+2. **§ 152.104 - Identical Merchandise**
+3. **§ 152.105 - Similar Merchandise**
+4. **§ 152.105 - Deductive Value** (resale price minus costs)
+5. **§ 152.106 - Computed Value** (materials + labor + profit)
+6. **§ 152.107 - Fallback** (reasonable method)
+
+**Common Mistake**: Using computed value when transaction value is available.
+
+### 19 CFR Parts 141-142 (Questions 41-65)
+**Entry procedures - know the requirements and timelines.**
+
+Key Sections:
+- **§ 141.4** - Entry and entry summary documentation
+- **§ 141.61** - Completion of entry (15 calendar days)
+- **§ 141.69** - Release of merchandise
+- **§ 142.3** - Entry summary documentation (10 working days)
+
+**Time Limits to Know**:
+- Entry filing: 15 calendar days from arrival
+- Entry summary: 10 working days from release
+- Protest: 180 days from liquidation
+- Recordkeeping: 5 years
 
 ---
 
-## ❌ Common Mistakes to Avoid
+## ⏱️ Exam Day Strategy
 
-### 1. Over-Tabbing Reference Materials
-- **Problem**: Too many tabs = confusion and wasted time
-- **Solution**: Focus on major sections and frequently tested areas
+### Time Management (4.5 hours = 270 minutes)
+- **Average**: 3.4 minutes per question
+- **Reality**: Some take 30 seconds, some take 8 minutes
 
-### 2. Neglecting Practice Exams
-- **Problem**: Unprepared for exam pace and pressure
-- **Solution**: Take at least 5-10 full-length timed practice exams
+**Three-Pass Strategy**:
 
-### 3. Joining Large Study Groups
-- **Problem**: Distractions, inefficiency, social time vs. study time
-- **Solution**: Study solo or with 1-2 dedicated partners
+**Pass 1 (90 minutes)**: Answer everything you know immediately
+- Part 111 questions (if you studied properly, these should be fast)
+- Easy classification questions
+- Simple valuation questions
+- Mark hard questions with "H"
 
-### 4. Procrastination
-- **Problem**: Inadequate preparation, cramming doesn't work
-- **Solution**: Start early (3-6 months), consistent daily study
+**Pass 2 (90 minutes)**: Use your references
+- Classification questions requiring HTSUS lookup
+- Valuation questions requiring Part 152 lookup
+- Entry questions requiring Parts 141-142 lookup
+- Practical exercise (read carefully, these are long)
 
-### 5. Over-Reliance on Memorization
-- **Problem**: Open book exam = understanding > memorization
-- **Solution**: Practice finding and applying information quickly
+**Pass 3 (60 minutes)**: Tackle the hard ones
+- Questions marked "H"
+- Questions requiring multiple lookups
+- Questions with complex fact patterns
 
-### 6. Ignoring Weak Areas
-- **Problem**: Focusing only on comfortable topics
-- **Solution**: Identify weaknesses early and dedicate extra time
+**Final Review (30 minutes)**: 
+- Check all answers
+- Make sure you didn't miss any
+- Don't second-guess too much
+
+### How to Use Your References
+
+**For CFR Questions**:
+1. Identify which Part the question is about
+2. Use your tabs to get to that Part quickly
+3. Skim section headings to find the relevant section
+4. Read the EXACT text - don't paraphrase
+5. Match the text to the answer choices
+
+**For Classification Questions**:
+1. Read the product description carefully
+2. Start with GRI 1 - check headings
+3. Use HTSUS index if needed
+4. Apply GRIs in order
+5. Check section/chapter notes
+6. Verify your answer
+
+**For Valuation Questions**:
+1. Identify which method applies (usually transaction value)
+2. Go to Part 152 and find that section
+3. Read what's included/excluded
+4. Calculate if needed
+5. Check your work
+
+### Common Traps
+
+**Watch for these words**:
+- "EXCEPT" - all answers are correct EXCEPT one
+- "NOT" - looking for the false statement
+- "ALWAYS" - absolute statements (usually wrong)
+- "MAY" vs "MUST" - big difference in CFR
+
+**Don't**:
+- ❌ Answer from experience ("I do this at work...")
+- ❌ Answer from common sense ("This makes sense...")
+- ❌ Skip reading the CFR ("I know this...")
+
+**Do**:
+- ✅ Find the exact CFR section
+- ✅ Read what it actually says
+- ✅ Match the text to the answer
+- ✅ Trust the regulations, not your brain
+
+---
+
+## 📝 Practice Exam Strategy
+
+### Where to Get Practice Exams
+1. **CBP Past Exams** (FREE): https://www.cbp.gov/document/publications/past-customs-broker-license-examinations-answer-keys
+   - Download ALL available exams
+   - These are REAL exam questions
+
+2. **Bagel's Academy** (FREE): https://bagelacademy.github.io/bagels-customs-academy/
+   - 293 real CBP questions from 2024-2025
+   - Three study modes
+   - Timer and analytics
+
+### How to Take Practice Exams
+
+**First Practice Exam (Week 2)**:
+- Take it cold (no prep) to establish baseline
+- Don't worry about the score
+- Identify your weak areas
+
+**Practice Exams (Weeks 3-10)**:
+- Take 1 per week
+- Full 4.5 hours, timed
+- Use your HTSUS and CFR
+- Simulate real exam conditions
+
+**Practice Exams (Weeks 11-12)**:
+- Take 1 every other day (6 total)
+- Full 4.5 hours, timed
+- Track your scores (should be improving)
+- Goal: Consistently scoring 75%+ by week 12
+
+### How to Review Practice Exams
+
+**For EVERY wrong answer**:
+1. Find the exact CFR section or HTSUS heading
+2. Read the full text
+3. Understand WHY you got it wrong
+4. Write down the CFR/HTSUS citation
+5. Re-read that section
+
+**For EVERY correct answer**:
+1. Verify you got it right for the RIGHT reason
+2. If you guessed, treat it as wrong and review
+
+**Track Your Weak Areas**:
+- Part 111 questions: __% correct
+- Classification questions: __% correct
+- Valuation questions: __% correct
+- Entry questions: __% correct
+- Drawback questions: __% correct
+
+**Focus Your Study**: Spend extra time on your weakest areas.
+
+---
+
+## 🎯 Study Habits That Work
+
+### Daily Study Routine (2-3 hours)
+- **30 minutes**: Review CFR sections (read, don't skim)
+- **60 minutes**: Practice questions from past exams
+- **30 minutes**: Review wrong answers and find citations
+- **30 minutes**: Practice navigating HTSUS/CFR quickly
+
+### Weekly Goals
+- **Week 1-2**: Master Part 111
+- **Week 3-4**: Master GRIs and classification
+- **Week 5-6**: Master Part 152 valuation
+- **Week 7-8**: Master Parts 141-142 entry
+- **Week 9-10**: Cover remaining topics + practice exams
+- **Week 11-12**: Practice exams only
+
+### What NOT to Do
+- ❌ Study in large groups (distractions)
+- ❌ Study with people who haven't read the CFR
+- ❌ Rely on "tips and tricks" instead of reading regulations
+- ❌ Skip practice exams
+- ❌ Cram the week before
+- ❌ Study new material the day before the exam
+
+### What TO Do
+- ✅ Read the CFR (boring but necessary)
+- ✅ Take practice exams (minimum 10 full exams)
+- ✅ Review every wrong answer
+- ✅ Practice finding information quickly
+- ✅ Trust the regulations, not your experience
+- ✅ Start early (12 weeks minimum)
+
+---
+
+## 🚫 Common Mistakes That Cause Failure
+
+### 1. Answering from Experience
+**Wrong**: "At my company, we always..."
+**Right**: "19 CFR § 111.23 says..."
+
+The exam doesn't care how you do it at work. It cares what the regulation says.
+
+### 2. Not Reading the CFR
+**Wrong**: Relying on summaries, study guides, or memory
+**Right**: Reading the actual CFR text during the exam
+
+You have the CFR in front of you. Use it.
+
+### 3. Skipping Practice Exams
+**Wrong**: "I'll just study the material..."
+**Right**: Taking 10+ full practice exams under timed conditions
+
+You need to practice finding information quickly under pressure.
+
+### 4. Over-Tabbing
+**Wrong**: Tabbing every single section
+**Right**: Tabbing major parts and key sections only
+
+Too many tabs = confusion. You need to KNOW your materials, not just tab them.
+
+### 5. Not Applying GRIs in Order
+**Wrong**: "This looks like it goes in Chapter 84..."
+**Right**: "GRI 1 says check headings first. Let me read the heading text..."
+
+GRIs MUST be applied in order. No shortcuts.
+
+### 6. Skipping Valuation Method Steps
+**Wrong**: "Computed value makes sense here..."
+**Right**: "Transaction value doesn't work, so I try identical merchandise next..."
+
+You cannot skip to method 5. Apply methods in order.
 
 ### 7. Not Reading Questions Carefully
-- **Problem**: Missing key words like "EXCEPT," "NOT," "ALWAYS"
-- **Solution**: Underline or highlight key words in questions
+**Wrong**: Speed reading and missing "EXCEPT" or "NOT"
+**Right**: Underlining key words like EXCEPT, NOT, ALWAYS, MUST, MAY
 
-### 8. Spending Too Long on One Question
-- **Problem**: Running out of time for easier questions
-- **Solution**: Skip and return to difficult questions
+One word can change the entire question.
 
----
+### 8. Leaving Questions Blank
+**Wrong**: "I don't know this one, I'll skip it..."
+**Right**: "I'll guess and mark it for review..."
 
-## 🎯 Topic-Specific Study Tips
-
-### Classification (Questions 26-40)
-- **Master GRIs**: Understand all 6 rules and their application
-- **Practice problems**: Work through 100+ classification scenarios
-- **Know chapter notes**: Section and chapter notes can override GRIs
-- **Common pitfalls**: Sets, mixtures, composite goods
-
-### Valuation (Questions 66-80)
-- **Hierarchy matters**: Methods must be applied in order
-- **Transaction value**: Know what's included/excluded
-- **Assists**: Understand when assists affect value
-- **Related parties**: Know the rules for related party transactions
-
-### Entry/Entry Summary (Questions 41-65)
-- **Documentation**: Know required documents for entry
-- **Bonds**: Understand different types and when required
-- **Release procedures**: Immediate release vs. entry summary
-- **Liquidation**: Understand the liquidation process
-
-### Broker Compliance (Questions 1-15)
-- **Part 111**: Know this inside and out
-- **Responsible supervision**: Key concept for broker duties
-- **Recordkeeping**: What records must be kept and for how long
-- **Penalties**: Grounds for license suspension/revocation
-
-### Modernized Drawback (Questions 21-25)
-- **Types**: Manufacturing, unused merchandise, rejected merchandise
-- **Claims**: Who can file, time limits, documentation
-- **Substitution**: Same 8-digit HTS classification
-
-### Practical Exercise (Questions 16-20)
-- **Scenario-based**: Long fact patterns with multiple questions
-- **Read carefully**: All details matter
-- **Reference materials**: Use HTSUS and CFR to verify answers
-- **Time management**: Don't spend too long on these
+No penalty for wrong answers. Always guess if you run out of time.
 
 ---
 
-## 📅 Sample 12-Week Study Schedule
+## 📋 Exam Day Checklist
 
-### Weeks 1-2: Foundation
-- Review exam structure and requirements
-- Organize and tab HTSUS and CFR
-- Read through all 19 CFR Part 111
+### Night Before
+- ✅ Get 7-8 hours of sleep (no cramming)
+- ✅ Pack your bag: HTSUS, CFR, calculator, pencils, erasers, ID
+- ✅ Review your tabs (make sure nothing fell off)
+- ✅ Eat a good dinner
+- ❌ Don't study new material
 
-### Weeks 3-4: Classification
-- Study GRIs 1-6 in depth
-- Practice 50+ classification problems
-- Review HTSUS structure and notes
-
-### Weeks 5-6: Valuation & Entry
-- Master valuation methods (§ 152.103-107)
-- Study entry procedures (Parts 141-142)
-- Practice valuation problems
-
-### Weeks 7-8: Specialized Topics
-- Modernized drawback
-- Country of origin marking
-- Customs bonds
-- Recordkeeping requirements
-
-### Weeks 9-10: Practice Exams
-- Take 3-4 full-length timed practice exams
-- Review all incorrect answers
-- Identify weak areas and review
-
-### Weeks 11-12: Final Review
-- Take 2-3 more practice exams
-- Review all weak areas
-- Practice navigation speed
-- Final review of Part 111
-
----
-
-## 🎬 Video Resources
-
-### Recommended YouTube Channels
-1. **Strategy For Success to Pass the Customs Broker License Exam**
-   - URL: https://www.youtube.com/watch?v=b8gijXISK54
-   - Overview of effective preparation strategies
-
-### Additional Video Topics to Search
-- "Customs broker exam classification"
-- "GRI General Rules of Interpretation"
-- "Customs valuation methods"
-- "19 CFR Part 111 overview"
-
----
-
-## 📝 Quick Reference Cheat Sheet
-
-### Most Tested CFR Sections
-1. 19 CFR § 111.23 - Responsible supervision
-2. 19 CFR § 111.36 - Relationships with unlicensed persons
-3. 19 CFR § 152.103 - Transaction value
-4. 19 CFR § 141.61 - Completion of entry
-5. 19 CFR § 142.3 - Entry summary documentation
-
-### Classification Quick Reference
-- **GRI 1**: Headings and section/chapter notes
-- **GRI 2(a)**: Incomplete or unfinished articles
-- **GRI 2(b)**: Mixtures and combinations
-- **GRI 3(a)**: Most specific description
-- **GRI 3(b)**: Essential character
-- **GRI 3(c)**: Heading last in numerical order
-- **GRI 6**: Apply GRIs 1-5 to subheadings
-
-### Valuation Quick Reference
-1. Transaction value (price paid/payable)
-2. Identical merchandise
-3. Similar merchandise
-4. Deductive value (resale price minus costs)
-5. Computed value (materials + labor + profit)
-6. Fallback (reasonable method)
-
-### Time Limits Quick Reference
-- **Entry filing**: 15 calendar days from arrival
-- **Entry summary**: 10 working days from release
-- **Protest**: 180 days from liquidation/decision
-- **Drawback claim**: 5 years from date of importation
-- **Recordkeeping**: 5 years from entry date
-
----
-
-## 🏆 Final Exam Day Tips
-
-### The Night Before
-- ✅ Get 7-8 hours of sleep
-- ✅ Prepare all materials (HTSUS, CFR, calculator, pencils)
-- ✅ Review quick reference notes (don't cram new material)
-- ✅ Eat a healthy dinner
-- ❌ Don't stay up late studying
-
-### Exam Day Morning
+### Morning Of
 - ✅ Eat a good breakfast
 - ✅ Arrive 30 minutes early
-- ✅ Bring photo ID and confirmation
-- ✅ Dress comfortably (layers for temperature)
+- ✅ Bring photo ID and exam confirmation
 - ✅ Use the restroom before exam starts
+- ✅ Dress in layers (room temperature varies)
 
-### During the Exam
+### During Exam
 - ✅ Read ALL instructions carefully
-- ✅ Manage your time (3.4 min/question)
-- ✅ Answer easy questions first
-- ✅ Mark difficult questions and return
-- ✅ Use your reference materials efficiently
+- ✅ Write your name/info correctly
+- ✅ Manage your time (check clock every 20 questions)
+- ✅ Use your references (that's why it's open book)
+- ✅ Mark difficult questions and return to them
 - ✅ Check all answers if time permits
+- ❌ Don't panic if others finish early (they might be failing)
 - ❌ Don't leave any blanks
-- ❌ Don't panic if others finish early
 
-### After the Exam
-- Results typically released 6-8 weeks later
+### After Exam
+- Results released 6-8 weeks later
 - Check CBP website for score release date
 - If you pass: Apply for license within 3 years
-- If you don't pass: Review weak areas and try again
+- If you don't pass: Identify weak areas and retake
 
 ---
 
-## 📞 Additional Resources & Support
+## 🎓 The Bottom Line
 
-### CBP Contact Information
-- **Phone**: 1-877-CBP-5511 (1-877-227-5511)
+**To pass this exam, you need**:
+1. Current year HTSUS and 19 CFR
+2. 12 weeks of disciplined study (2-3 hours daily)
+3. 10+ full practice exams
+4. Ability to find information quickly in your references
+5. Willingness to trust the regulations over your experience
+
+**You don't need**:
+- Expensive courses
+- Study groups
+- Textbooks
+- "Insider tips"
+- Trade experience
+
+**The exam is testing ONE thing**: Can you find and apply the correct regulation?
+
+**If you can do that, you will pass.**
+
+---
+
+## 📞 Official Resources Only
+
+### CBP Contact
+- **Phone**: 1-877-CBP-5511
 - **Email**: brokerinfo@cbp.dhs.gov
 - **Website**: https://www.cbp.gov/trade/programs-administration/customs-brokers
 
-### Online Communities
-- LinkedIn Groups: "Customs Brokers" and "International Trade Professionals"
-- Reddit: r/CustomsBroker
-- Trade associations: NCBFAA (National Customs Brokers & Forwarders Association)
-
-### Continuing Education
-- CBP webinars and training sessions
-- Trade association conferences
-- Industry publications and newsletters
+### Free Study Materials
+- **Past Exams**: https://www.cbp.gov/document/publications/past-customs-broker-license-examinations-answer-keys
+- **HTSUS**: https://hts.usitc.gov/
+- **19 CFR**: https://www.ecfr.gov/current/title-19
+- **Bagel's Academy**: https://bagelacademy.github.io/bagels-customs-academy/
 
 ---
 
 ## 🐕 About Bagel's Customs Academy
 
-**Bagel's Customs Academy** is a free, web-based study tool featuring:
-- 293 real CBP exam questions from 2024-2025 exams
-- Three study modes: Speed Round, Open Study, Linear Study
-- Timer system with time-per-question tracking
-- Results dashboard with detailed analytics
-- Customs fun facts and test prep guidance
+Free study tool with 293 real CBP exam questions from 2024-2025.
 
-**Access the academy**: https://bagelacademy.github.io/bagels-customs-academy/
+**Access**: https://bagelacademy.github.io/bagels-customs-academy/
 
-*Built with ❤️ by eswanson*
+**Built with ❤️ by eswanson**
 
 ---
 
-## 📚 Study Guide Version History
-
-- **v1.0** (February 20, 2026): Initial comprehensive study guide
-  - Compiled from web research and official CBP resources
-  - Includes exam statistics, study strategies, and reference materials
-  - Tabbing strategies and time management tips
-  - Common mistakes and topic-specific guidance
-
----
-
-**Good luck on your exam! 🎉**
-
-*Remember: The exam is challenging, but with proper preparation, dedication, and the right resources, you can pass! Stay focused, practice consistently, and believe in yourself.* 🐕
-
----
-
-**Disclaimer**: This study guide is for educational purposes only. Always verify information with official CBP sources and current regulations. Exam content and requirements may change.
+**Good luck. Read the CFR. Trust the regulations. You've got this.** 🎉🐕
