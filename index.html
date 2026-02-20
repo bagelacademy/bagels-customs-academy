@@ -91,7 +91,7 @@
     <main class="container mx-auto px-4 py-8 max-w-6xl">
         <!-- Mode Selection Screen -->
         <div id="modeSelection" class="space-y-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Choose Your Study Mode</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Choose your study mode</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Speed Round -->
@@ -195,76 +195,115 @@
                 </button>
             </div>
 
-            <!-- Reference Links -->
-            <div class="mt-12 pt-8 border-t-2 border-gray-200">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Organize your reference materials</h2>
-                <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Get Ready Section -->
+            <div class="mt-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-customs-navy mb-4">Get ready for the test</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Organize your reference materials and prepare for exam day. These resources are permitted during the open-book exam!
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
                     <!-- eCFR Title 19 -->
                     <a href="https://www.ecfr.gov/current/title-19" target="_blank" rel="noopener noreferrer" 
-                       class="group bg-gradient-to-br from-customs-navy to-blue-900 rounded-2xl shadow-xl p-8 text-white transition transform hover:scale-105 hover:shadow-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-3xl backdrop-blur-sm">
+                       class="mode-card bg-gradient-to-br from-customs-navy to-blue-900 rounded-2xl shadow-xl p-8 text-white border-2 border-transparent hover:border-blue-400">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
                                 📜
                             </div>
-                            <svg class="w-6 h-6 text-white/60 group-hover:text-white group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
+                            <h3 class="text-2xl font-bold mb-2">Title 19 CFR</h3>
+                            <div class="inline-block bg-blue-100/20 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                                OPEN BOOK MATERIAL
+                            </div>
                         </div>
-                        <h4 class="text-2xl font-bold mb-2">Title 19 CFR</h4>
-                        <p class="text-blue-200 text-sm mb-4">Code of Federal Regulations</p>
-                        <p class="text-white/90 text-sm leading-relaxed">
+                        <p class="text-white/90 mb-6 text-center leading-relaxed">
                             Complete regulations for customs duties, broker requirements, entry procedures, and all CBP rules. This is your legal foundation!
                         </p>
-                        <div class="mt-4 text-xs text-blue-300 font-semibold">
-                            ✓ Open Book Exam Material
+                        <div class="space-y-2 text-sm text-blue-200">
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>Broker compliance (Part 111)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>Entry procedures (Parts 141-142)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>Valuation & classification</span>
+                            </div>
                         </div>
                     </a>
 
                     <!-- US HTS -->
                     <a href="https://hts.usitc.gov/" target="_blank" rel="noopener noreferrer"
-                       class="group bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl shadow-xl p-8 text-white transition transform hover:scale-105 hover:shadow-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-3xl backdrop-blur-sm">
+                       class="mode-card bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl shadow-xl p-8 text-white border-2 border-transparent hover:border-emerald-400">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
                                 📦
                             </div>
-                            <svg class="w-6 h-6 text-white/60 group-hover:text-white group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
+                            <h3 class="text-2xl font-bold mb-2">US HTS</h3>
+                            <div class="inline-block bg-emerald-100/20 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                                OPEN BOOK MATERIAL
+                            </div>
                         </div>
-                        <h4 class="text-2xl font-bold mb-2">US HTS</h4>
-                        <p class="text-emerald-200 text-sm mb-4">Harmonized Tariff Schedule</p>
-                        <p class="text-white/90 text-sm leading-relaxed">
+                        <p class="text-white/90 mb-6 text-center leading-relaxed">
                             Official classification system for imported goods. Master the 99 chapters and 6 General Rules of Interpretation (GRIs)!
                         </p>
-                        <div class="mt-4 text-xs text-emerald-300 font-semibold">
-                            ✓ Open Book Exam Material
+                        <div class="space-y-2 text-sm text-emerald-200">
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>99 classification chapters</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>6 General Rules (GRIs)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>Duty rates & tariff codes</span>
+                            </div>
                         </div>
                     </a>
 
                     <!-- Exam Registration -->
                     <a href="https://www.cbp.gov/trade/programs-administration/customs-brokers/license-examination-notice-examination/registration-information" target="_blank" rel="noopener noreferrer"
-                       class="group bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl shadow-xl p-8 text-white transition transform hover:scale-105 hover:shadow-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center text-3xl backdrop-blur-sm">
+                       class="mode-card bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl shadow-xl p-8 text-white border-2 border-transparent hover:border-purple-400">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
                                 ✍️
                             </div>
-                            <svg class="w-6 h-6 text-white/60 group-hover:text-white group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
+                            <h3 class="text-2xl font-bold mb-2">Exam Registration</h3>
+                            <div class="inline-block bg-purple-100/20 text-purple-200 text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+                                TWICE YEARLY
+                            </div>
                         </div>
-                        <h4 class="text-2xl font-bold mb-2">Exam Registration</h4>
-                        <p class="text-purple-200 text-sm mb-4">CBP License Examination</p>
-                        <p class="text-white/90 text-sm leading-relaxed">
+                        <p class="text-white/90 mb-6 text-center leading-relaxed">
                             Official CBP registration information, exam dates, fees, and requirements. Register early - seats fill up fast!
                         </p>
-                        <div class="mt-4 text-xs text-purple-300 font-semibold">
-                            ✓ Twice Yearly (April & October)
+                        <div class="space-y-2 text-sm text-purple-200">
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>April & October exams</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>Registration deadlines</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-2">✓</span>
+                                <span>Exam fees & requirements</span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <p class="text-center text-sm text-gray-600 mt-6 italic">
-                    💡 Pro Tip: Tab the CFR and HTS extensively before exam day - this is key to passing the exam!
-                </p>
+
+                <div class="mt-8 text-center">
+                    <p class="text-sm text-gray-600 italic">
+                        💡 Pro Tip: Tab the CFR and HTS extensively before exam day - this is key to passing the exam!
+                    </p>
+                </div>
             </div>
         </div>
 
