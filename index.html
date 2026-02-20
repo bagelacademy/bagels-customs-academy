@@ -810,12 +810,12 @@
         // Load questions from JSON
         async function loadQuestions() {
             try {
-                const response = await fetch('/data/parsed/all_questions.json');
+                const response = await fetch('./data/parsed/all_questions.json');
                 allQuestions = await response.json();
-                console.log(`Loaded ${allQuestions.length} questions`);
+                console.log(`✅ Loaded ${allQuestions.length} questions`);
             } catch (error) {
-                console.error('Error loading questions:', error);
-                alert('Error loading questions. Make sure the server is running.');
+                console.error('❌ Error loading questions:', error);
+                alert('Error loading questions. Please refresh the page.');
             }
         }
 
