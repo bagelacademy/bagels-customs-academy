@@ -1,0 +1,35 @@
+# PDFs (too large for GitHub)
+data/exams/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Backups
+*_backup.html
+*_professional.html
+
+# Zip files
+*.zip
+
+# Documentation (not needed for website)
+docs/
+scripts/
+*.md
+!README.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
