@@ -3,1567 +3,1108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bagel's Customs Academy - Broker Exam Prep</title>
+    <title>Bagel's Customs Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'customs-navy': '#1e3a8a',
-                        'customs-blue': '#3b82f6',
-                        'customs-gold': '#f59e0b'
+                        'cream': '#FAF7F2',
+                        'warm': '#F5EDE4',
+                        'toast': '#E8DDD0',
+                        'caramel': '#C4956A',
+                        'espresso': '#2C1810',
+                        'bark': '#4A3228',
+                        'moss': '#4A6741',
+                        'sage': '#7A9B6D',
+                        'blush': '#E8A0BF',
+                        'sky': '#7EC8E3',
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Fraunces', serif; }
         
-        body {
-            font-family: 'Inter', sans-serif;
+        body { background-color: #FAF7F2; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(1deg); }
         }
-        
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
+        @keyframes wag {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
         }
-        
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
-        .slide-up {
-            animation: slideUp 0.3s ease-out;
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+        .float { animation: float 4s ease-in-out infinite; }
+        .wag { animation: wag 0.4s ease-in-out infinite; }
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        .fade-in-d1 { animation: fadeIn 0.5s ease-out 0.1s forwards; opacity: 0; }
+        .fade-in-d2 { animation: fadeIn 0.5s ease-out 0.2s forwards; opacity: 0; }
+        .fade-in-d3 { animation: fadeIn 0.5s ease-out 0.3s forwards; opacity: 0; }
         
         .mode-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .mode-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 12px 40px -8px rgba(44, 24, 16, 0.12);
         }
         
         .option-btn {
-            transition: all 0.2s ease;
+            transition: all 0.15s ease;
         }
+        .option-btn:hover:not(.locked) {
+            background: #F5EDE4;
+            transform: translateX(3px);
+        }
+        .option-btn.locked { pointer-events: none; }
         
-        .option-btn:hover:not(.disabled) {
-            transform: translateX(4px);
-            box-shadow: -4px 0 0 0 #3b82f6;
+        .bagel-says {
+            position: relative;
+            background: linear-gradient(135deg, #FFF9F0, #FFF5E8);
+            border: 1.5px solid #E8DDD0;
         }
+        .bagel-says::before {
+            content: '🐕';
+            position: absolute;
+            top: -12px;
+            left: 16px;
+            font-size: 20px;
+            background: #FAF7F2;
+            padding: 0 4px;
+        }
+
+        .pill { 
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 500;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #E8DDD0; border-radius: 3px; }
     </style>
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
-    <!-- Professional Header -->
-    <header class="bg-gradient-to-r from-customs-navy via-blue-900 to-customs-navy text-white shadow-2xl">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex items-center justify-between">
+<body class="text-espresso min-h-screen">
+
+    <div id="app" class="max-w-2xl mx-auto px-5 py-8 md:py-14">
+
+        <!-- HEADER -->
+        <header class="flex items-center justify-between mb-14 fade-in">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="showHome()">
+                <div class="text-3xl float">🐕</div>
                 <div>
-                    <div class="flex items-center space-x-3 mb-2">
-                        <div class="w-12 h-12 bg-customs-gold rounded-lg flex items-center justify-center text-2xl font-bold shadow-lg">
-                            🛃
-                        </div>
-                        <div>
-                            <h1 class="text-4xl font-bold tracking-tight">Bagel's Customs Academy</h1>
-                            <p class="text-blue-200 text-sm">Where Good Dogs Help You Pass the Broker Exam 🐕</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden md:block text-right">
-                    <div class="text-3xl font-bold text-customs-gold">295</div>
-                    <div class="text-sm text-blue-200">Real Exam Questions</div>
-                    <div class="text-xs text-blue-300 mt-1">2023-2025 CBP Exams</div>
+                    <h1 class="font-display text-xl font-bold text-espresso tracking-tight">Bagel's</h1>
+                    <p class="text-[11px] text-bark/60 font-medium tracking-wide uppercase">Customs Academy</p>
                 </div>
             </div>
-        </div>
-    </header>
+            <nav class="flex items-center gap-5">
+                <button onclick="showStats()" class="text-sm text-bark/50 hover:text-espresso transition font-medium">Progress</button>
+                <button onclick="showResources()" class="text-sm text-bark/50 hover:text-espresso transition font-medium">Resources</button>
+            </nav>
+        </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8 max-w-6xl">
-        <!-- Mode Selection Screen -->
-        <div id="modeSelection" class="space-y-6">
-            <!-- Choose Study Mode Section -->
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-customs-navy mb-4">Choose your study mode</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Select how you want to study. Each mode is designed to help you prepare effectively for the exam.
+        <!-- HOME -->
+        <div id="homeScreen">
+            <!-- Hero -->
+            <div class="mb-14 fade-in-d1">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-espresso leading-[1.1] mb-5">
+                    Pass the customs<br>broker exam.
+                </h2>
+                <p class="text-bark/70 text-lg max-w-md leading-relaxed">
+                    293 real CBP questions. Smart feedback when you mess up. A very good dog keeping you honest.
                 </p>
             </div>
+
+            <!-- Bagel Quote -->
+            <div class="bagel-says rounded-2xl p-5 mb-12 fade-in-d2">
+                <p class="text-bark/80 text-[15px] leading-relaxed italic" id="welcomeQuote">
+                    The pass rate is somewhere between "yikes" and "oh no." But you've got all the real exam questions and an open-book format. You just need to practice finding answers fast.
+                </p>
+            </div>
+
+            <!-- Modes -->
+            <div class="space-y-4 mb-12 fade-in-d3">
+                <div class="mode-card bg-white rounded-2xl border border-toast/60 p-6 cursor-pointer" onclick="startSpeedRound()">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="pill bg-red-50 text-red-600 border border-red-100">10 min</span>
+                                <h3 class="font-display text-lg font-bold">Speed Round</h3>
+                            </div>
+                            <p class="text-bark/60 text-sm">Random questions, clock running. Build your lookup speed.</p>
+                        </div>
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                </div>
+
+                <div class="mode-card bg-white rounded-2xl border border-toast/60 p-6 cursor-pointer" onclick="startFreeStudy()">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="pill bg-sky/20 text-sky border border-sky/30">All Qs</span>
+                                <h3 class="font-display text-lg font-bold">Free Study</h3>
+                            </div>
+                            <p class="text-bark/60 text-sm">Every question, no timer. Filter by category. Go at your own pace.</p>
+                        </div>
+                        <span class="text-2xl">📚</span>
+                    </div>
+                </div>
+
+                <div class="mode-card bg-white rounded-2xl border border-toast/60 p-6 cursor-pointer" onclick="showTestSetup()">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="pill bg-moss/10 text-moss border border-moss/20">80 Qs</span>
+                                <h3 class="font-display text-lg font-bold">Practice Test</h3>
+                            </div>
+                            <p class="text-bark/60 text-sm">Simulate the real exam. Random mix or a specific past test.</p>
+                        </div>
+                        <span class="text-2xl">📝</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick stats if returning -->
+            <div id="quickStats"></div>
+        </div>
+
+        <!-- TEST SETUP -->
+        <div id="testSetup" class="hidden">
+            <button onclick="showHome()" class="text-sm text-bark/50 hover:text-espresso transition mb-8 flex items-center gap-1">&larr; Back</button>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Speed Round -->
-                <div class="mode-card bg-white rounded-2xl shadow-xl p-8 cursor-pointer border-2 border-transparent hover:border-red-500" onclick="startMode('speed')">
-                    <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg">
-                            ⚡
+            <h2 class="font-display text-3xl font-bold mb-3">Pick your test</h2>
+            <p class="text-bark/60 mb-8">80 questions. Same format as exam day. 75% to pass.</p>
+
+            <div class="space-y-3 mb-8">
+                <div class="mode-card bg-white rounded-xl border border-toast/60 p-5 cursor-pointer" onclick="startPracticeTest('random')">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="font-bold text-[15px] mb-1">Random mix</h3>
+                            <p class="text-bark/50 text-sm">80 questions pulled from all available exams</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Speed Round</h3>
-                        <div class="inline-block bg-red-100 text-red-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                            10 MINUTES
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">Race against the clock with random questions. Perfect for testing your speed and accuracy under pressure!</p>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <div class="flex items-center">
-                            <span class="text-red-500 mr-2">✓</span>
-                            <span>10 minute countdown timer</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-red-500 mr-2">✓</span>
-                            <span>Random question selection</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-red-500 mr-2">✓</span>
-                            <span>Time-per-question tracking</span>
-                        </div>
+                        <span class="text-bark/30">&rarr;</span>
                     </div>
                 </div>
 
-                <!-- Open Study -->
-                <div class="mode-card bg-white rounded-2xl shadow-xl p-8 cursor-pointer border-2 border-transparent hover:border-blue-500" onclick="startMode('open')">
-                    <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg">
-                            🔀
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Open Study</h3>
-                        <div class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                            ALL 295 QUESTIONS
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">Practice all questions in random order at your own pace. Ideal for comprehensive review and building confidence!</p>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <div class="flex items-center">
-                            <span class="text-blue-500 mr-2">✓</span>
-                            <span>Complete question bank</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-blue-500 mr-2">✓</span>
-                            <span>Randomized order</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-blue-500 mr-2">✓</span>
-                            <span>No time pressure</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="border-t border-toast/40 my-6"></div>
+                <p class="text-xs text-bark/40 font-medium uppercase tracking-wider mb-3">Specific exams</p>
+                <div id="examList" class="space-y-3"></div>
+            </div>
 
-                <!-- Linear Study -->
-                <div class="mode-card bg-white rounded-2xl shadow-xl p-8 cursor-pointer border-2 border-transparent hover:border-green-500" onclick="startMode('linear')">
-                    <div class="text-center mb-6">
-                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg">
-                            📚
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Linear Study</h3>
-                        <div class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                            CHRONOLOGICAL
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6 text-center">Study questions in original exam order, newest first. Perfect for systematic review and tracking progress by exam!</p>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <div class="flex items-center">
-                            <span class="text-green-500 mr-2">✓</span>
-                            <span>Newest exams first</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-green-500 mr-2">✓</span>
-                            <span>Original question order</span>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-green-500 mr-2">✓</span>
-                            <span>Track by exam source</span>
-                        </div>
-                    </div>
+            <div class="bagel-says rounded-xl p-4">
+                <p class="text-bark/70 text-sm">Real exam is 4.5 hours for 80 questions. That's about 3.4 minutes each. I won't time you here, but keep an eye on it. The people who fail usually run out of time, not knowledge.</p>
+            </div>
+        </div>
+
+        <!-- STUDY SCREEN -->
+        <div id="studyScreen" class="hidden">
+            <!-- Top bar -->
+            <div class="flex items-center justify-between mb-6">
+                <button onclick="exitStudy()" class="text-sm text-bark/50 hover:text-espresso transition">&times; End</button>
+                <div class="flex items-center gap-4 text-sm">
+                    <span id="timer" class="hidden font-mono text-red-500 font-bold"></span>
+                    <span class="text-bark/40" id="progress">1/80</span>
+                    <span class="text-moss font-medium" id="scoreDisplay">0%</span>
                 </div>
             </div>
 
-            <!-- Action Buttons -->
-            <div class="flex flex-wrap justify-center gap-4 mt-12">
-                <button onclick="showResults()" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition transform hover:scale-105">
-                    <span class="text-2xl mr-2">📊</span>
-                    View Results & Stats
-                </button>
-                <button onclick="showFunFacts()" class="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition transform hover:scale-105">
-                    <span class="text-2xl mr-2">🎉</span>
-                    Fun Facts & Trivia
-                </button>
-                <button onclick="showTestPrep()" class="bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition transform hover:scale-105">
-                    <span class="text-2xl mr-2">📖</span>
-                    Test Prep Guide
-                </button>
+            <!-- Progress bar -->
+            <div class="w-full h-[3px] bg-toast/50 rounded-full mb-10 overflow-hidden">
+                <div id="progressBar" class="h-full bg-caramel rounded-full transition-all duration-300" style="width:0%"></div>
             </div>
 
-            <!-- Get Ready Section -->
-            <div class="mt-16">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-customs-navy mb-4">Get ready for the test</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">
-                        Organize your reference materials and prepare for exam day. These resources are permitted during the open-book exam!
-                    </p>
-                </div>
+            <!-- Question area -->
+            <div class="mb-3">
+                <span id="catPill" class="pill bg-warm text-bark/70 border border-toast/60 text-[11px]"></span>
+            </div>
+            <h2 id="questionText" class="font-display text-xl md:text-2xl font-medium text-espresso leading-snug mb-8"></h2>
 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- eCFR Title 19 -->
-                    <a href="https://www.ecfr.gov/current/title-19" target="_blank" rel="noopener noreferrer" 
-                       class="mode-card bg-gradient-to-br from-customs-navy to-blue-900 rounded-2xl shadow-xl p-8 text-white border-2 border-transparent hover:border-blue-400">
-                        <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
-                                📜
+            <!-- Options -->
+            <div id="options" class="space-y-3 mb-8"></div>
+
+            <!-- Feedback -->
+            <div id="feedback" class="hidden mb-8"></div>
+
+            <!-- Nav -->
+            <div class="flex items-center justify-between pt-6 border-t border-toast/40">
+                <button id="prevBtn" onclick="goPrev()" class="text-sm text-bark/40 hover:text-espresso transition disabled:opacity-30" disabled>&larr; Prev</button>
+                <button id="nextBtn" onclick="goNext()" class="text-sm text-caramel hover:text-espresso transition font-medium">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="resultsScreen" class="hidden">
+            <button onclick="showHome()" class="text-sm text-bark/50 hover:text-espresso transition mb-8 flex items-center gap-1">&larr; Home</button>
+
+            <div class="text-center mb-10">
+                <div id="resultScore" class="font-display text-6xl font-bold mb-2"></div>
+                <p id="resultLabel" class="text-bark/50 text-sm"></p>
+            </div>
+
+            <div class="bagel-says rounded-2xl p-5 mb-10" id="resultBagelSays"></div>
+
+            <div id="categoryResults" class="mb-10"></div>
+            <div id="missedReview"></div>
+        </div>
+
+        <!-- STATS -->
+        <div id="statsScreen" class="hidden">
+            <button onclick="showHome()" class="text-sm text-bark/50 hover:text-espresso transition mb-8 flex items-center gap-1">&larr; Home</button>
+            <h2 class="font-display text-3xl font-bold mb-8">Your progress</h2>
+            <div id="statsContent"></div>
+        </div>
+
+        <!-- RESOURCES -->
+        <div id="resourcesScreen" class="hidden">
+            <button onclick="showHome()" class="text-sm text-bark/50 hover:text-espresso transition mb-8 flex items-center gap-1">&larr; Home</button>
+            <h2 class="font-display text-3xl font-bold mb-3">Exam resources</h2>
+            <p class="text-bark/60 mb-8">Everything you're allowed to bring on test day. Get familiar with navigating these fast.</p>
+
+            <!-- Sub-nav -->
+            <div class="flex gap-2 mb-8 flex-wrap">
+                <button onclick="showResourceTab('open-book')" class="resource-tab pill bg-espresso text-cream border border-espresso" data-tab="open-book">Open Book Materials</button>
+                <button onclick="showResourceTab('study-guide')" class="resource-tab pill bg-white text-bark/60 border border-toast/60" data-tab="study-guide">Study Guide</button>
+                <button onclick="showResourceTab('fun-facts')" class="resource-tab pill bg-white text-bark/60 border border-toast/60" data-tab="fun-facts">Fun Facts</button>
+            </div>
+
+            <!-- OPEN BOOK TAB -->
+            <div id="tab-open-book" class="resource-panel">
+                <div class="space-y-4 mb-10">
+                    <a href="https://www.ecfr.gov/current/title-19" target="_blank" class="block bg-white rounded-xl border border-toast/60 p-5 hover:border-caramel/40 transition group">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-bold text-[15px] mb-1 group-hover:text-caramel transition">Title 19 CFR</h3>
+                                <p class="text-bark/50 text-sm">All customs regulations. Tab Part 111, 141, 142, 152, and 113 at minimum.</p>
                             </div>
-                            <h3 class="text-2xl font-bold mb-2">Title 19 CFR</h3>
-                            <div class="inline-block bg-blue-100/20 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
-                                OPEN BOOK MATERIAL
-                            </div>
-                        </div>
-                        <p class="text-white/90 mb-6 text-center leading-relaxed">
-                            Complete regulations for customs duties, broker requirements, entry procedures, and all CBP rules. This is your legal foundation!
-                        </p>
-                        <div class="space-y-2 text-sm text-blue-200">
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>Broker compliance (Part 111)</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>Entry procedures (Parts 141-142)</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>Valuation & classification</span>
-                            </div>
+                            <span class="text-bark/20 group-hover:text-caramel transition">&nearr;</span>
                         </div>
                     </a>
-
-                    <!-- US HTS -->
-                    <a href="https://hts.usitc.gov/" target="_blank" rel="noopener noreferrer"
-                       class="mode-card bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl shadow-xl p-8 text-white border-2 border-transparent hover:border-emerald-400">
-                        <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
-                                📦
+                    <a href="https://hts.usitc.gov/" target="_blank" class="block bg-white rounded-xl border border-toast/60 p-5 hover:border-caramel/40 transition group">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-bold text-[15px] mb-1 group-hover:text-caramel transition">Harmonized Tariff Schedule</h3>
+                                <p class="text-bark/50 text-sm">99 chapters, 6 GRIs. Practice finding codes in under 2 minutes.</p>
                             </div>
-                            <h3 class="text-2xl font-bold mb-2">US HTS</h3>
-                            <div class="inline-block bg-emerald-100/20 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
-                                OPEN BOOK MATERIAL
-                            </div>
-                        </div>
-                        <p class="text-white/90 mb-6 text-center leading-relaxed">
-                            Official classification system for imported goods. Master the 99 chapters and 6 General Rules of Interpretation (GRIs)!
-                        </p>
-                        <div class="space-y-2 text-sm text-emerald-200">
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>99 classification chapters</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>6 General Rules (GRIs)</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>Duty rates & tariff codes</span>
-                            </div>
+                            <span class="text-bark/20 group-hover:text-caramel transition">&nearr;</span>
                         </div>
                     </a>
-
-                    <!-- Exam Registration -->
-                    <a href="https://www.cbp.gov/trade/programs-administration/customs-brokers/license-examination-notice-examination/registration-information" target="_blank" rel="noopener noreferrer"
-                       class="mode-card bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl shadow-xl p-8 text-white border-2 border-transparent hover:border-purple-400">
-                        <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
-                                ✍️
+                    <a href="https://www.cbp.gov/trade/programs-administration/customs-brokers/license-examination-notice-examination/registration-information" target="_blank" class="block bg-white rounded-xl border border-toast/60 p-5 hover:border-caramel/40 transition group">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-bold text-[15px] mb-1 group-hover:text-caramel transition">Exam registration</h3>
+                                <p class="text-bark/50 text-sm">April and October. Register early.</p>
                             </div>
-                            <h3 class="text-2xl font-bold mb-2">Exam Registration</h3>
-                            <div class="inline-block bg-purple-100/20 text-purple-200 text-xs font-semibold px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
-                                TWICE YEARLY
-                            </div>
-                        </div>
-                        <p class="text-white/90 mb-6 text-center leading-relaxed">
-                            Official CBP registration information, exam dates, fees, and requirements. Register early - seats fill up fast!
-                        </p>
-                        <div class="space-y-2 text-sm text-purple-200">
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>April & October exams</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>Registration deadlines</span>
-                            </div>
-                            <div class="flex items-center">
-                                <span class="mr-2">✓</span>
-                                <span>Exam fees & requirements</span>
-                            </div>
+                            <span class="text-bark/20 group-hover:text-caramel transition">&nearr;</span>
                         </div>
                     </a>
                 </div>
 
-                <div class="mt-8 text-center">
-                    <p class="text-sm text-gray-600 italic">
-                        💡 Pro Tip: Tab the CFR and HTS extensively before exam day - this is key to passing the exam!
-                    </p>
+                <div class="bg-warm rounded-xl p-5 mb-6">
+                    <h3 class="font-bold text-sm mb-3">Quick facts</h3>
+                    <div class="grid grid-cols-2 gap-y-2 gap-x-6 text-sm text-bark/70">
+                        <div>80 multiple choice</div><div>4.5 hours</div>
+                        <div>75% to pass (60/80)</div><div>Open book</div>
+                        <div>~3.4 min per question</div><div>April & October</div>
+                    </div>
+                </div>
+
+                <div class="bg-warm rounded-xl p-5 mb-6">
+                    <h3 class="font-bold text-sm mb-3">Permitted materials</h3>
+                    <ul class="text-sm text-bark/70 space-y-1">
+                        <li>• Harmonized Tariff Schedule (HTSUS)</li>
+                        <li>• Title 19 CFR (Code of Federal Regulations)</li>
+                        <li>• ACE Catair documents</li>
+                        <li>• Your own notes and tabs</li>
+                    </ul>
+                </div>
+
+                <!-- What to Buy -->
+                <div class="bg-white rounded-xl border border-toast/60 p-5">
+                    <h3 class="font-bold text-sm mb-4">What to buy</h3>
+                    <p class="text-bark/50 text-xs mb-4">You need physical copies. No laptops allowed in the testing room.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="text-sm mt-0.5">📘</span>
+                            <div>
+                                <p class="font-medium text-sm">Title 19 CFR (printed, bound)</p>
+                                <p class="text-bark/40 text-xs">Current year edition. This is your primary reference. Buy it early and live in it.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sm mt-0.5">📗</span>
+                            <div>
+                                <p class="font-medium text-sm">Harmonized Tariff Schedule (printed, bound)</p>
+                                <p class="text-bark/40 text-xs">The full HTSUS. Heavy. Worth it. You'll use it for ~20 questions.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sm mt-0.5">🏷️</span>
+                            <div>
+                                <p class="font-medium text-sm">Tabs and flags</p>
+                                <p class="text-bark/40 text-xs">Color-coded. Tab every key CFR part and HTS chapter you'll reference. This is what separates passers from failers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sm mt-0.5">🖍️</span>
+                            <div>
+                                <p class="font-medium text-sm">Highlighters</p>
+                                <p class="text-bark/40 text-xs">Mark up your books during study. On exam day you'll scan for color instead of reading every line.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sm mt-0.5">🔢</span>
+                            <div>
+                                <p class="font-medium text-sm">Basic calculator</p>
+                                <p class="text-bark/40 text-xs">Non-programmable only. You'll need it for valuation and duty calculation questions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bagel-says rounded-xl p-4 mt-6">
+                    <p class="text-bark/70 text-sm">Tab your CFR. The people who pass aren't the ones who memorized Part 111. They're the ones who can flip to 19 CFR 152.103(e) in under 30 seconds.</p>
+                </div>
+            </div>
+
+            <!-- STUDY GUIDE TAB -->
+            <div id="tab-study-guide" class="resource-panel hidden">
+                <!-- Top CFR Parts -->
+                <h3 class="font-display text-xl font-bold mb-4">Most tested CFR parts</h3>
+                <p class="text-bark/50 text-sm mb-6">Focus here first. These show up on every exam.</p>
+
+                <div class="space-y-3 mb-10">
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 111 - Customs Brokers</span>
+                            <span class="pill bg-moss/10 text-moss border border-moss/20 text-[10px]">HIGH</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Licensing, responsibilities, ethical standards. Key: §111.1, §111.28, §111.29, §111.53</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 141 - Entry of Merchandise</span>
+                            <span class="pill bg-moss/10 text-moss border border-moss/20 text-[10px]">HIGH</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Entry requirements and procedures. Key: §141.0a, §141.4, §141.61, §141.86</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 152 - Classification & Appraisement</span>
+                            <span class="pill bg-moss/10 text-moss border border-moss/20 text-[10px]">HIGH</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Valuation methods, classification rules. Key: §152.101-107, transaction value</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 142 - Entry Process</span>
+                            <span class="pill bg-caramel/20 text-caramel border border-caramel/30 text-[10px]">MED</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Steps for entry and release. Key: §142.3, §142.16</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 113 - Customs Bonds</span>
+                            <span class="pill bg-caramel/20 text-caramel border border-caramel/30 text-[10px]">MED</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Bonding requirements. Key: §113.62 (basic), §113.63 (continuous)</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 134 - Country of Origin Marking</span>
+                            <span class="pill bg-caramel/20 text-caramel border border-caramel/30 text-[10px]">MED</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Marking requirements. Key: §134.1, §134.11, §134.35</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 163 - Recordkeeping</span>
+                            <span class="pill bg-bark/10 text-bark/50 border border-bark/10 text-[10px]">STD</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">5-year retention period. Key: §163.1, §163.2</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 174 - Protests</span>
+                            <span class="pill bg-bark/10 text-bark/50 border border-bark/10 text-[10px]">STD</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">180 days from liquidation. Key: §174.12, §174.13</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 171 - Fines, Penalties & Forfeitures</span>
+                            <span class="pill bg-bark/10 text-bark/50 border border-bark/10 text-[10px]">STD</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Penalty amounts, mitigation. Key: §171.1</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="font-bold text-sm">Part 133 - Intellectual Property</span>
+                            <span class="pill bg-bark/10 text-bark/50 border border-bark/10 text-[10px]">STD</span>
+                        </div>
+                        <p class="text-bark/50 text-xs">Trademark/copyright protection. Key: §133.21, §133.23</p>
+                    </div>
+                </div>
+
+                <!-- Topic Breakdown -->
+                <h3 class="font-display text-xl font-bold mb-4">Exam topic breakdown</h3>
+                <p class="text-bark/50 text-sm mb-6">Classification and Entry make up nearly half the exam.</p>
+                <div class="space-y-3 mb-10">
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex justify-between text-sm mb-2"><span class="font-medium">Classification (HTS)</span><span class="text-caramel font-bold">~25%</span></div>
+                        <div class="w-full h-2 bg-toast/30 rounded-full"><div class="h-full bg-caramel rounded-full" style="width:25%"></div></div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex justify-between text-sm mb-2"><span class="font-medium">Entry Procedures</span><span class="text-caramel font-bold">~20%</span></div>
+                        <div class="w-full h-2 bg-toast/30 rounded-full"><div class="h-full bg-caramel rounded-full" style="width:20%"></div></div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex justify-between text-sm mb-2"><span class="font-medium">Valuation</span><span class="text-caramel font-bold">~15%</span></div>
+                        <div class="w-full h-2 bg-toast/30 rounded-full"><div class="h-full bg-caramel rounded-full" style="width:15%"></div></div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex justify-between text-sm mb-2"><span class="font-medium">Broker Compliance</span><span class="text-caramel font-bold">~12%</span></div>
+                        <div class="w-full h-2 bg-toast/30 rounded-full"><div class="h-full bg-caramel rounded-full" style="width:12%"></div></div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <div class="flex justify-between text-sm mb-2"><span class="font-medium">Drawback & Other</span><span class="text-caramel font-bold">~28%</span></div>
+                        <div class="w-full h-2 bg-toast/30 rounded-full"><div class="h-full bg-caramel rounded-full" style="width:28%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Study Strategies -->
+                <h3 class="font-display text-xl font-bold mb-4">Study strategies</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-bold text-sm mb-1">📑 Tab your books</p>
+                        <p class="text-bark/50 text-xs">Color-code by topic. You'll save minutes on exam day finding sections fast.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-bold text-sm mb-1">⏱️ Practice timed</p>
+                        <p class="text-bark/50 text-xs">3.4 minutes per question. If you're stuck after 4 minutes, flag it and move on.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-bold text-sm mb-1">📚 Learn the GRIs</p>
+                        <p class="text-bark/50 text-xs">The 6 General Rules of Interpretation are the legal framework for classification. Apply sequentially.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-bold text-sm mb-1">🔄 Spaced repetition</p>
+                        <p class="text-bark/50 text-xs">Review over weeks, not days. Cramming doesn't work for this exam.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-bold text-sm mb-1">📖 Read the actual CFR</p>
+                        <p class="text-bark/50 text-xs">Study guides help, but you must read the regulations themselves. No shortcuts.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-bold text-sm mb-1">📝 Take past exams</p>
+                        <p class="text-bark/50 text-xs">Do them all under timed conditions. Analyze every mistake.</p>
+                    </div>
+                </div>
+
+                <!-- Common Mistakes -->
+                <h3 class="font-display text-xl font-bold mb-4">Common mistakes</h3>
+                <div class="space-y-2 mb-6">
+                    <div class="bg-red-50/50 rounded-lg border border-red-100/50 p-3">
+                        <p class="text-sm text-bark/70"><span class="text-red-400 font-bold">✗</span> Not practicing under timed conditions. The time pressure is real.</p>
+                    </div>
+                    <div class="bg-red-50/50 rounded-lg border border-red-100/50 p-3">
+                        <p class="text-sm text-bark/70"><span class="text-red-400 font-bold">✗</span> Skipping "boring" parts. Bonds, protests, and penalties are tested.</p>
+                    </div>
+                    <div class="bg-red-50/50 rounded-lg border border-red-100/50 p-3">
+                        <p class="text-sm text-bark/70"><span class="text-red-400 font-bold">✗</span> Misreading questions. Watch for "EXCEPT," "NOT," and "LEAST" qualifiers.</p>
+                    </div>
+                    <div class="bg-red-50/50 rounded-lg border border-red-100/50 p-3">
+                        <p class="text-sm text-bark/70"><span class="text-red-400 font-bold">✗</span> Poor tab organization. If you can't find it in 30 seconds, your tabs need work.</p>
+                    </div>
+                    <div class="bg-red-50/50 rounded-lg border border-red-100/50 p-3">
+                        <p class="text-sm text-bark/70"><span class="text-red-400 font-bold">✗</span> Using outdated materials. Regulations change. Use current 19 CFR.</p>
+                    </div>
+                </div>
+
+                <div class="bagel-says rounded-xl p-4">
+                    <p class="text-bark/70 text-sm">The exam is open book but that's not the gift it sounds like. You have 270 minutes for 80 questions. Every second you spend flipping pages is a second you're not thinking. Know where things live.</p>
+                </div>
+            </div>
+
+            <!-- FUN FACTS TAB -->
+            <div id="tab-fun-facts" class="resource-panel hidden">
+                <h3 class="font-display text-xl font-bold mb-2">The weird side of customs</h3>
+                <p class="text-bark/50 text-sm mb-8">Because if you're going to study this stuff, you might as well enjoy the absurdity.</p>
+
+                <!-- Exam Trivia -->
+                <div class="mb-10">
+                    <h4 class="font-bold text-sm text-bark/40 uppercase tracking-wider mb-4">Exam trivia</h4>
+                    <div class="space-y-3">
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">Pass rates are brutal</p>
+                            <p class="text-bark/60 text-sm mb-2">Average is around 15%. Some exams hit single digits.</p>
+                            <div class="text-xs text-bark/40 space-y-0.5">
+                                <div>October 2025: 12% · April 2025: 30% (highest in years)</div>
+                                <div>October 2024: 24% · April 2023: 5.5% (yikes)</div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">An AI passed the exam</p>
+                            <p class="text-bark/60 text-sm">In October 2025, an AI named "Kay" by KYG Trade scored 93%. The robots are studying too.</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">Open book doesn't mean easy</p>
+                            <p class="text-bark/60 text-sm">Despite full access to HTSUS, 19 CFR, and ACE documents, the 4.5-hour time limit and question complexity make this one of the hardest professional licensing exams in the U.S.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weird Regulations -->
+                <div class="mb-10">
+                    <h4 class="font-bold text-sm text-bark/40 uppercase tracking-wider mb-4">Weird regulations that actually exist</h4>
+                    <div class="space-y-3">
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">🔪 The one-armed switchblade exception</p>
+                            <p class="text-bark/60 text-sm mb-1"><span class="font-medium">19 CFR § 12.98:</span> Switchblades are prohibited... unless you have only one arm. Then you can import one with a blade up to 3 inches.</p>
+                            <p class="text-bark/40 text-xs">The regulation specifically acknowledges utility for individuals with limited manual dexterity. This is real.</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">💍 Married women as sureties</p>
+                            <p class="text-bark/60 text-sm mb-1"><span class="font-medium">Former 19 CFR § 113.35(b)(2):</span> Used to state that a married woman could act as surety on a customs bond... unless her state prohibited it.</p>
+                            <p class="text-bark/40 text-xs">Removed to align with modern equal rights standards. But it was on the books for decades.</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">🚫 Felons need permission</p>
+                            <p class="text-bark/60 text-sm"><span class="font-medium">19 CFR § 111.53(e):</span> Customs brokers cannot employ anyone convicted of a felony without written approval from CBP's Assistant Commissioner.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTS Oddities -->
+                <div class="mb-10">
+                    <h4 class="font-bold text-sm text-bark/40 uppercase tracking-wider mb-4">HTS code oddities</h4>
+                    <div class="space-y-3">
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">🐵 You can import primates</p>
+                            <p class="text-bark/60 text-sm"><span class="font-medium">HTS 0106.11:</span> Live primates have their own classification. Good luck with the CITES permits and explaining the chimp to your neighbors.</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">🐋 Whale imports are classified</p>
+                            <p class="text-bark/60 text-sm"><span class="font-medium">HTS 0106.12:</span> Live whales, dolphins, and porpoises have their own code. Because someone thought we'd need it.</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">🚽 Toilet seats are plastic, not furniture</p>
+                            <p class="text-bark/60 text-sm"><span class="font-medium">HTS 3924.90:</span> Chapter 39 (plastics), not Chapter 94 (furniture). This has caused actual trade disputes. Classification matters for duty rates.</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">🏠 Prefab buildings are furniture</p>
+                            <p class="text-bark/60 text-sm"><span class="font-medium">Chapter 94:</span> Your shed, your garage, that modular home - all classified as "furniture." Chapter 94 is wild.</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-toast/60 p-5">
+                            <p class="font-bold text-sm mb-2">🐶 Dogs are "other mammals"</p>
+                            <p class="text-bark/60 text-sm"><span class="font-medium">HTS 0106.19:</span> Man's best friend gets lumped into "other live mammals not elsewhere specified." Primates and whales get their own codes. Dogs don't. Personally offended.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Did You Know -->
+                <div>
+                    <h4 class="font-bold text-sm text-bark/40 uppercase tracking-wider mb-4">Did you know</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="bg-warm rounded-xl p-4">
+                            <p class="font-bold text-sm mb-1">99 chapters</p>
+                            <p class="text-bark/50 text-xs">From live animals (Ch. 1) to works of art (Ch. 97). Ch. 98 is special provisions, Ch. 99 is temporary legislation.</p>
+                        </div>
+                        <div class="bg-warm rounded-xl p-4">
+                            <p class="font-bold text-sm mb-1">3.375 min per question</p>
+                            <p class="text-bark/50 text-xs">80 questions in 270 minutes. Time management is the difference between passing and failing.</p>
+                        </div>
+                        <div class="bg-warm rounded-xl p-4">
+                            <p class="font-bold text-sm mb-1">200+ parts in 19 CFR</p>
+                            <p class="text-bark/50 text-xs">From broker regulations to drawback procedures. That's why tabs matter.</p>
+                        </div>
+                        <div class="bg-warm rounded-xl p-4">
+                            <p class="font-bold text-sm mb-1">International system</p>
+                            <p class="text-bark/50 text-xs">The HS is used by 200+ countries. First 6 digits are standardized globally.</p>
+                        </div>
+                        <div class="bg-warm rounded-xl p-4">
+                            <p class="font-bold text-sm mb-1">Classification = duty rates</p>
+                            <p class="text-bark/50 text-xs">Wrong HTS code can mean 0% vs 25%+ duty. That's why it's a quarter of the exam.</p>
+                        </div>
+                        <div class="bg-warm rounded-xl p-4">
+                            <p class="font-bold text-sm mb-1">You can miss 20</p>
+                            <p class="text-bark/50 text-xs">60/80 is passing. Sounds generous until you see the pass rates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bagel-says rounded-xl p-4 mt-8">
+                    <p class="text-bark/70 text-sm">Dogs are "other mammals" and prefab buildings are "furniture." If customs classification made intuitive sense, there wouldn't be an exam for it.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Practice Screen -->
-        <div id="practiceScreen" class="hidden fade-in">
-            <!-- Timer & Stats Bar -->
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-                <div class="bg-white rounded-xl shadow-lg p-4 border-l-4 border-red-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-1">Timer</div>
-                    <div class="text-3xl font-bold text-red-600" id="timer">--:--</div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-4 border-l-4 border-blue-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-1">Question</div>
-                    <div class="text-3xl font-bold text-blue-600" id="currentQuestion">1 / 295</div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-4 border-l-4 border-purple-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-1">Answered</div>
-                    <div class="text-3xl font-bold text-purple-600" id="answeredCount">0</div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-4 border-l-4 border-green-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-1">Correct</div>
-                    <div class="text-3xl font-bold text-green-600" id="correctCount">0</div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-4 border-l-4 border-orange-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-1">Accuracy</div>
-                    <div class="text-3xl font-bold text-orange-600" id="score">0%</div>
-                </div>
-            </div>
-
-            <!-- Question Card -->
-            <div class="bg-white rounded-2xl shadow-2xl p-8 mb-6">
-                <!-- Question Header -->
-                <div class="flex justify-between items-center mb-6 pb-4 border-b-2 border-gray-100">
-                    <div class="flex space-x-2">
-                        <span class="inline-block bg-customs-blue text-white text-xs font-bold px-4 py-2 rounded-full" id="categoryBadge">
-                            Loading...
-                        </span>
-                        <span class="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-4 py-2 rounded-full" id="examSource">
-                        </span>
-                    </div>
-                    <div class="text-sm font-semibold text-gray-600 bg-gray-100 px-4 py-2 rounded-full" id="questionTime">
-                        ⏱️ 0s
-                    </div>
-                </div>
-
-                <!-- Question Text -->
-                <div class="mb-8">
-                    <h2 class="text-xl font-bold text-gray-900 leading-relaxed" id="questionText">
-                        Loading question...
-                    </h2>
-                </div>
-
-                <!-- Options -->
-                <div class="space-y-4" id="optionsContainer">
-                    <!-- Options will be inserted here -->
-                </div>
-
-                <!-- Result Message -->
-                <div id="resultMessage" class="mt-8 p-6 rounded-xl hidden">
-                    <div class="font-bold text-lg mb-2" id="resultText"></div>
-                    <div class="text-sm text-gray-700" id="explanationText"></div>
-                </div>
-
-                <!-- Navigation -->
-                <div class="flex justify-between mt-10 pt-6 border-t-2 border-gray-100">
-                    <button onclick="previousQuestion()" 
-                            class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-xl transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
-                            id="prevButton">
-                        ← Previous
-                    </button>
-                    <button onclick="console.log('🔵 Button clicked!'); endSession();" 
-                            class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-xl transition transform hover:scale-105 shadow-lg"
-                            id="endSessionButton">
-                        End Session
-                    </button>
-                    <button onclick="nextQuestion()" 
-                            class="bg-customs-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl transition transform hover:scale-105 shadow-lg"
-                            id="nextButton">
-                        Next →
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Results Screen -->
-        <div id="resultsScreen" class="hidden fade-in">
-            <!-- Professional Header -->
-            <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl shadow-xl p-8 mb-8 text-white">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <h2 class="text-4xl font-bold mb-2">📊 Your Results & Statistics</h2>
-                        <p class="text-purple-100">Track your progress and identify areas for improvement</p>
-                    </div>
-                    <button onclick="backToModes()" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition transform hover:scale-105 border-2 border-white/30">
-                        ← Back to Modes
-                    </button>
-                </div>
-            </div>
-
-            <!-- Encouragement Banner -->
-            <div id="encouragementBanner" class="mb-8">
-                <!-- Will be populated with motivational message -->
-            </div>
-
-            <!-- Overall Stats -->
-            <div class="grid md:grid-cols-4 gap-4 mb-8">
-                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-2">Total Sessions</div>
-                    <div class="text-3xl font-bold text-blue-600" id="totalSessions">0</div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-2">Questions Attempted</div>
-                    <div class="text-3xl font-bold text-purple-600" id="totalAttempted">0</div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-2">Overall Accuracy</div>
-                    <div class="text-3xl font-bold text-green-600" id="overallAccuracy">0%</div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-orange-500">
-                    <div class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-2">Avg Time/Question</div>
-                    <div class="text-3xl font-bold text-orange-600" id="avgTime">0s</div>
-                </div>
-            </div>
-
-            <!-- Recurring Errors -->
-            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
-                <h3 class="text-2xl font-bold mb-6 text-gray-900">🔴 Questions You Keep Missing</h3>
-                <div id="recurringErrors" class="space-y-4">
-                    <!-- Will be populated -->
-                </div>
-            </div>
-
-            <!-- Session History -->
-            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
-                <h3 class="text-2xl font-bold mb-6 text-gray-900">📝 Recent Sessions</h3>
-                <div id="sessionHistory" class="space-y-4">
-                    <!-- Will be populated -->
-                </div>
-            </div>
-
-            <!-- Category Breakdown -->
-            <div class="bg-white rounded-2xl shadow-xl p-8">
-                <h3 class="text-2xl font-bold mb-6 text-gray-900">📊 Performance by Category</h3>
-                <div id="categoryBreakdown">
-                    <!-- Will be populated -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Fun Facts Screen -->
-        <div id="funFactsScreen" class="hidden fade-in">
-            <!-- Professional Header -->
-            <div class="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl shadow-xl p-8 mb-8 text-white">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <h2 class="text-4xl font-bold mb-2">🎉 Customs Fun Facts & Trivia</h2>
-                        <p class="text-orange-100">Strange regulations, arcane codes, and exam trivia to keep you entertained!</p>
-                    </div>
-                    <button onclick="backToModes()" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition transform hover:scale-105 border-2 border-white/30">
-                        ← Back to Modes
-                    </button>
-                </div>
-            </div>
-
-            <!-- Exam Trivia -->
-            <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg shadow-lg p-6 mb-6">
-                <h3 class="text-xl font-bold mb-4 text-purple-800">📚 Customs Broker Exam Trivia</h3>
-                <div class="space-y-4">
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="font-bold text-lg mb-2">🎯 Pass Rates Are Brutal</div>
-                        <p class="text-gray-700 mb-2">The average pass rate is around <strong>15%</strong>, with some exams as low as <strong>2%</strong>!</p>
-                        <div class="text-sm text-gray-600 space-y-1">
-                            <div>• October 2025: 12%</div>
-                            <div>• April 2025: 30% (highest in years!)</div>
-                            <div>• April 2023: 5.5% (ouch!)</div>
-                            <div>• October 2024: 24%</div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
-                        <div class="font-bold text-lg mb-2">🤖 AI Passed the Exam!</div>
-                        <p class="text-gray-700">In October 2025, an AI assistant named "Kay" by KYG Trade scored <strong>93%</strong> on the CBLE - crushing the 75% requirement. The robots are coming for our jobs! 😅</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-green-500">
-                        <div class="font-bold text-lg mb-2">📖 It's Open Book... But Still Hard</div>
-                        <p class="text-gray-700">Despite being open book with access to HTSUS, 19 CFR, and ACE documents, the exam's 4.5-hour time limit and complexity make it one of the toughest professional licensing exams in the U.S.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Strange 19 CFR Regulations -->
-            <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg shadow-lg p-6 mb-6">
-                <h3 class="text-xl font-bold mb-4 text-red-800">🔴 Weird & Wonderful 19 CFR Regulations</h3>
-                <div class="space-y-4">
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-red-500">
-                        <div class="font-bold text-lg mb-2">🔪 The One-Armed Switchblade Exception</div>
-                        <p class="text-gray-700 mb-2"><strong>19 CFR § 12.98:</strong> Switchblade knives are generally prohibited... UNLESS you have only one arm!</p>
-                        <p class="text-sm text-gray-600">If you have one arm, you can import a switchblade with a blade up to 3 inches long. The regulation specifically acknowledges the utility for individuals with limited manual dexterity. This is a real regulation! 🤯</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-orange-500">
-                        <div class="font-bold text-lg mb-2">💍 Married Women as Sureties (Historical)</div>
-                        <p class="text-gray-700 mb-2"><strong>Former 19 CFR § 113.35(b)(2):</strong> This regulation used to state that a married woman could act as surety on a customs bond... unless her state prohibited it.</p>
-                        <p class="text-sm text-gray-600">This reflected outdated legal views on married women's contractual capacity. It's been removed to align with modern equal rights standards. But it was on the books for decades! 👰</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-yellow-500">
-                        <div class="font-bold text-lg mb-2">🚫 Felons Need Permission</div>
-                        <p class="text-gray-700 mb-2"><strong>19 CFR § 111.53(e):</strong> Customs brokers cannot employ anyone convicted of a felony without written approval from CBP.</p>
-                        <p class="text-sm text-gray-600">Even if you want to give someone a second chance, you need the Assistant Commissioner's blessing first.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HTS Fun Facts -->
-            <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-lg shadow-lg p-6 mb-6">
-                <h3 class="text-xl font-bold mb-4 text-green-800">📦 HTS Code Oddities</h3>
-                <div class="space-y-4">
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-green-500">
-                        <div class="font-bold text-lg mb-2">🐵 You Can Import Primates</div>
-                        <p class="text-gray-700 mb-2"><strong>HTS Code 0106.11:</strong> Live primates (monkeys, apes) have their own classification!</p>
-                        <p class="text-sm text-gray-600">Yes, you can technically import live monkeys. Though good luck with the permits, CITES regulations, and explaining to your neighbors why there's a chimp in your backyard. 🙈</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
-                        <div class="font-bold text-lg mb-2">🐋 Whale Imports Are Classified</div>
-                        <p class="text-gray-700 mb-2"><strong>HTS Code 0106.12:</strong> Live whales, dolphins, and porpoises have their own code.</p>
-                        <p class="text-sm text-gray-600">Because apparently someone thought "we should probably have a code for when someone tries to import a whale." International conservation laws make this nearly impossible, but the code exists! 🐳</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="font-bold text-lg mb-2">🚽 Toilet Seats Are Plastic, Not Furniture</div>
-                        <p class="text-gray-700 mb-2"><strong>HTS Code 3924.90:</strong> Toilet seats are classified under plastics (Chapter 39), not furniture (Chapter 94).</p>
-                        <p class="text-sm text-gray-600">This has caused actual trade disputes. Is it furniture you sit on, or a plastic household article? The HTS says: plastic! Classification matters for duty rates. 💺</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-pink-500">
-                        <div class="font-bold text-lg mb-2">🏠 Prefab Buildings Are Furniture</div>
-                        <p class="text-gray-700 mb-2"><strong>Chapter 94:</strong> Prefabricated buildings are classified as "furniture."</p>
-                        <p class="text-sm text-gray-600">Your shed? Furniture. Your garage? Furniture. That modular home? Believe it or not... furniture! Chapter 94 is wild. 🏗️</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-indigo-500">
-                        <div class="font-bold text-lg mb-2">🐶 Dogs Are "Other Mammals"</div>
-                        <p class="text-gray-700 mb-2"><strong>HTS Code 0106.19:</strong> Man's best friend is classified as "other live mammals not elsewhere specified."</p>
-                        <p class="text-sm text-gray-600">Dogs, one of the most common domestic animals, get lumped into a catch-all "other" category. Meanwhile, primates and whales get their own specific codes. Priorities! 🐕</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Did You Know -->
-            <div class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-amber-800">💡 Did You Know?</h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
-                        <div class="font-bold mb-2">📏 The HTS Has 99 Chapters</div>
-                        <p class="text-sm text-gray-700">From live animals (Chapter 1) to works of art (Chapter 97), the HTS classifies everything. Chapter 98 is for special classification provisions, and Chapter 99 is for temporary legislation.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
-                        <div class="font-bold mb-2">⏱️ You Get 3.375 Minutes Per Question</div>
-                        <p class="text-sm text-gray-700">With 80 questions in 4.5 hours (270 minutes), you have about 3 minutes and 22 seconds per question. Time management is CRITICAL!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
-                        <div class="font-bold mb-2">📚 19 CFR Has 200+ Parts</div>
-                        <p class="text-sm text-gray-700">Title 19 of the Code of Federal Regulations contains over 200 parts covering everything from broker regulations to drawback procedures. It's a LOT to know!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
-                        <div class="font-bold mb-2">🎯 75% Is Passing</div>
-                        <p class="text-sm text-gray-700">You need 60 out of 80 questions correct to pass. That means you can miss 20 questions and still become a licensed customs broker. But with those pass rates... good luck! 🍀</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
-                        <div class="font-bold mb-2">🌍 The HTS Is International</div>
-                        <p class="text-sm text-gray-700">The Harmonized System (HS) is used by over 200 countries worldwide. The first 6 digits are standardized internationally, while countries add their own digits for more specificity.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-amber-500">
-                        <div class="font-bold mb-2">💰 Classification Affects Duty Rates</div>
-                        <p class="text-sm text-gray-700">Getting the HTS code wrong can mean paying the wrong duty rate - sometimes 0% vs 25%+! That's why classification is such a big part of the exam.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Test Prep Screen -->
-        <div id="testPrepScreen" class="hidden fade-in">
-            <!-- Professional Header -->
-            <div class="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-2xl shadow-xl p-8 mb-8 text-white">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <h2 class="text-4xl font-bold mb-2">📚 Test Prep Guide & Study Tips</h2>
-                        <p class="text-emerald-100">Master the exam with proven strategies and expert guidance</p>
-                    </div>
-                    <button onclick="backToModes()" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition transform hover:scale-105 border-2 border-white/30">
-                        ← Back to Modes
-                    </button>
-                </div>
-            </div>
-
-            <!-- Exam Overview -->
-            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-lg p-6 mb-6">
-                <h3 class="text-xl font-bold mb-4 text-blue-800">📋 Exam Overview</h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="font-bold text-lg mb-2">Format</div>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• 80 multiple-choice questions</li>
-                            <li>• 4.5 hours (270 minutes)</li>
-                            <li>• Open book exam</li>
-                            <li>• 75% passing score (60/80 correct)</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="font-bold text-lg mb-2">Permitted Materials</div>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• Harmonized Tariff Schedule (HTSUS)</li>
-                            <li>• Title 19 CFR</li>
-                            <li>• ACE Catair documents</li>
-                            <li>• Your own notes & tabs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Top 10 Most Tested CFR Parts -->
-            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg shadow-lg p-6 mb-6">
-                <h3 class="text-xl font-bold mb-4 text-green-800">🎯 Top 10 Most Tested 19 CFR Parts</h3>
-                <p class="text-sm text-gray-600 mb-4">Focus your study on these sections - they appear most frequently on the exam!</p>
-                
-                <div class="space-y-3">
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-green-600">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 111 – Customs Brokers</div>
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">HIGH PRIORITY</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Licensing, responsibilities, ethical standards, and broker compliance requirements.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §111.1 (definitions), §111.28 (responsible supervision), §111.29 (notification requirements), §111.53 (employment restrictions)
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-green-600">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 141 – Entry of Merchandise</div>
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">HIGH PRIORITY</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Requirements and procedures for importing goods into the U.S.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §141.0a (entry types), §141.4 (entry requirements), §141.61 (entry documentation), §141.86 (missing documents)
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-green-600">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 152 – Classification & Appraisement</div>
-                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">HIGH PRIORITY</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">How goods are classified and valued for duty purposes.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §152.101-107 (valuation methods), §152.1 (definitions), transaction value rules
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 142 – Entry Process</div>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">MEDIUM PRIORITY</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Steps for entry and release of merchandise.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §142.3 (entry procedures), §142.16 (entry summary documentation)
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 113 – Customs Bonds</div>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">MEDIUM PRIORITY</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Bonding requirements for customs activities.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §113.62 (basic importation bond), §113.63 (continuous bond), bond amounts
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 134 – Country of Origin Marking</div>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">MEDIUM PRIORITY</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Marking requirements to indicate country of origin.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §134.1 (definitions), §134.11 (general marking requirements), §134.35 (exceptions)
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 163 – Recordkeeping</div>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">STANDARD</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Maintenance of records for customs transactions.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §163.1 (retention period - 5 years), §163.2 (what records to keep)
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 133 – Intellectual Property</div>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">STANDARD</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Protection of trademarks, trade names, and copyrights.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §133.21 (recordation), §133.23 (restrictions on importation)
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 171 – Fines, Penalties & Forfeitures</div>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">STANDARD</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Penalties for violations and mitigation procedures.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §171.1 (definitions), mitigation guidelines, penalty amounts
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="flex justify-between items-start mb-2">
-                            <div class="font-bold text-lg">Part 174 – Protests</div>
-                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">STANDARD</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">Process for challenging customs decisions.</p>
-                        <div class="text-xs text-gray-600">
-                            <strong>Key sections:</strong> §174.12 (filing protests), §174.13 (time limits - 180 days)
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Exam Topic Breakdown -->
-            <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg shadow-lg p-6 mb-6">
-                <h3 class="text-xl font-bold mb-4 text-orange-800">📊 Exam Topic Breakdown</h3>
-                <p class="text-sm text-gray-600 mb-4">Classification and Entry make up nearly HALF the exam!</p>
-                
-                <div class="space-y-3">
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-bold">Classification (HTS)</span>
-                            <span class="text-sm font-semibold text-orange-600">~25%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-orange-600 h-3 rounded-full" style="width: 25%"></div>
-                        </div>
-                        <p class="text-xs text-gray-600 mt-2">Master the 6 General Rules of Interpretation (GRIs) and practice with real products!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-bold">Entry Procedures</span>
-                            <span class="text-sm font-semibold text-orange-600">~20%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-orange-600 h-3 rounded-full" style="width: 20%"></div>
-                        </div>
-                        <p class="text-xs text-gray-600 mt-2">Know entry types, documentation requirements, and timelines.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-bold">Valuation</span>
-                            <span class="text-sm font-semibold text-orange-600">~15%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-orange-600 h-3 rounded-full" style="width: 15%"></div>
-                        </div>
-                        <p class="text-xs text-gray-600 mt-2">Transaction value and the 5 alternative methods.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-bold">Broker Compliance</span>
-                            <span class="text-sm font-semibold text-orange-600">~12%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-orange-600 h-3 rounded-full" style="width: 12%"></div>
-                        </div>
-                        <p class="text-xs text-gray-600 mt-2">Part 111 is your bread and butter - know it cold!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-bold">Trade Agreements</span>
-                            <span class="text-sm font-semibold text-orange-600">~10%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-orange-600 h-3 rounded-full" style="width: 10%"></div>
-                        </div>
-                        <p class="text-xs text-gray-600 mt-2">USMCA, FTAs, and preferential treatment.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-bold">Drawback & Other Topics</span>
-                            <span class="text-sm font-semibold text-orange-600">~18%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-orange-600 h-3 rounded-full" style="width: 18%"></div>
-                        </div>
-                        <p class="text-xs text-gray-600 mt-2">Drawback, bonds, marking, IPR, penalties, protests.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Study Strategies -->
-            <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg shadow-lg p-6 mb-6">
-                <h3 class="text-xl font-bold mb-4 text-purple-800">💡 Proven Study Strategies</h3>
-                
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="font-bold text-lg mb-2">📑 Tab Your Books</div>
-                        <p class="text-sm text-gray-700">Create a comprehensive tabbing system for 19 CFR and HTSUS. Color-code by topic. You'll save precious minutes during the exam!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="font-bold text-lg mb-2">🗂️ Use Flashcards</div>
-                        <p class="text-sm text-gray-700">Memorize CFR part numbers, key definitions, and common classifications. Digital or physical - whatever works for you!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-pink-500">
-                        <div class="font-bold text-lg mb-2">📝 Practice Past Exams</div>
-                        <p class="text-sm text-gray-700">CBP publishes past exams with answer keys. Do them ALL under timed conditions. Analyze your mistakes!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-pink-500">
-                        <div class="font-bold text-lg mb-2">⏱️ Master Time Management</div>
-                        <p class="text-sm text-gray-700">3.375 minutes per question. If stuck, mark it and move on. Come back with fresh eyes later.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="font-bold text-lg mb-2">📚 Study the GRIs</div>
-                        <p class="text-sm text-gray-700">The 6 General Rules of Interpretation are the legal framework for classification. Apply them sequentially!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
-                        <div class="font-bold text-lg mb-2">👥 Join a Study Group</div>
-                        <p class="text-sm text-gray-700">Discuss complex topics with others. Teaching someone else is the best way to learn!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-pink-500">
-                        <div class="font-bold text-lg mb-2">📖 Read Explanatory Notes</div>
-                        <p class="text-sm text-gray-700">HTS Explanatory Notes provide detailed guidance for classification and resolve ambiguities.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-pink-500">
-                        <div class="font-bold text-lg mb-2">🔄 Review Regularly</div>
-                        <p class="text-sm text-gray-700">Spaced repetition works! Review material multiple times over weeks/months, not just cramming.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Common Mistakes to Avoid -->
-            <div class="bg-gradient-to-r from-red-50 to-rose-50 rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-red-800">⚠️ Common Mistakes to Avoid</h3>
-                
-                <div class="space-y-3">
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-red-500">
-                        <div class="font-bold mb-1">❌ Not Practicing Under Timed Conditions</div>
-                        <p class="text-sm text-gray-700">The time pressure is REAL. Practice with a timer to build speed and stamina.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-red-500">
-                        <div class="font-bold mb-1">❌ Skipping the "Boring" Parts</div>
-                        <p class="text-sm text-gray-700">Bonds, protests, and penalties might seem dry, but they're tested! Don't skip them.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-red-500">
-                        <div class="font-bold mb-1">❌ Relying Only on Study Guides</div>
-                        <p class="text-sm text-gray-700">Study guides are helpful, but you MUST read the actual CFR and HTSUS. No shortcuts!</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-red-500">
-                        <div class="font-bold mb-1">❌ Not Updating Your Materials</div>
-                        <p class="text-sm text-gray-700">Regulations change! Make sure you're studying the current version of 19 CFR.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-red-500">
-                        <div class="font-bold mb-1">❌ Misreading Questions</div>
-                        <p class="text-sm text-gray-700">Read carefully! Questions often have qualifiers like "EXCEPT" or "NOT" that change the answer.</p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-4 border-l-4 border-red-500">
-                        <div class="font-bold mb-1">❌ Poor Tab Organization</div>
-                        <p class="text-sm text-gray-700">If you can't find information quickly, your tabs are useless. Practice using them!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-customs-navy text-white py-8 mt-20">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-blue-200">© 2026 Bagel's Customs Academy 🐕 • 295 Questions from Official CBP Exams (2023-2025)</p>
-            <p class="text-blue-300 text-sm mt-2">Built with ❤️ by eswanson for customs broker license exam preparation</p>
-        </div>
-    </footer>
+    </div>
 
     <script>
-        // Global state
-        let allQuestions = [];
-        let currentMode = null;
-        let sessionQuestions = [];
-        let currentIndex = 0;
-        let sessionAnswers = {};
-        let sessionStartTime = null;
-        let questionStartTime = null;
-        let timerInterval = null;
-        let sessionTimeLimit = null; // For speed round
+    // ============================================================
+    // DATA & STATE
+    // ============================================================
+    let ALL_QS = [];
+    let session = { mode:null, qs:[], idx:0, answers:{}, start:null, timer:null, source:null };
 
-        // LocalStorage keys
-        const STORAGE_KEYS = {
-            SESSIONS: 'cbp_sessions',
-            ERRORS: 'cbp_recurring_errors'
-        };
+    async function init() {
+        try {
+            const r = await fetch('all_questions.json');
+            ALL_QS = await r.json();
+            buildExamList();
+            renderQuickStats();
+            setWelcome();
+        } catch(e) { console.error(e); }
+    }
 
-        // Load questions from JSON
-        async function loadQuestions() {
-            try {
-                const response = await fetch('./data/parsed/all_questions.json');
-                allQuestions = await response.json();
-                console.log(`✅ Loaded ${allQuestions.length} questions`);
-            } catch (error) {
-                console.error('❌ Error loading questions:', error);
-                alert('Error loading questions. Please refresh the page.');
-            }
-        }
+    // ============================================================
+    // NAVIGATION
+    // ============================================================
+    function hideAll() {
+        ['homeScreen','testSetup','studyScreen','resultsScreen','statsScreen','resourcesScreen']
+            .forEach(id => document.getElementById(id).classList.add('hidden'));
+    }
 
-        // Start a study mode
-        function startMode(mode) {
-            currentMode = mode;
-            sessionAnswers = {};
-            currentIndex = 0;
-            sessionStartTime = Date.now();
-            questionStartTime = Date.now();
-
-            // Prepare questions based on mode
-            if (mode === 'speed') {
-                // Random 20-30 questions for 10 minutes
-                sessionQuestions = shuffleArray([...allQuestions]).slice(0, 30);
-                sessionTimeLimit = 10 * 60 * 1000; // 10 minutes
-            } else if (mode === 'open') {
-                // All questions shuffled
-                sessionQuestions = shuffleArray([...allQuestions]);
-                sessionTimeLimit = null;
-            } else if (mode === 'linear') {
-                // Sort by exam date (newest first), then by question number
-                sessionQuestions = [...allQuestions].sort((a, b) => {
-                    // April 2025 > October 2024
-                    if (a.exam_source !== b.exam_source) {
-                        return b.exam_source.localeCompare(a.exam_source);
-                    }
-                    return a.question_number - b.question_number;
-                });
-                sessionTimeLimit = null;
-            }
-
-            // Show practice screen
-            document.getElementById('modeSelection').classList.add('hidden');
-            document.getElementById('practiceScreen').classList.remove('hidden');
-
-            // Start timer
-            startTimer();
-            displayQuestion();
-        }
-
-        // Timer functions
-        function startTimer() {
-            updateTimerDisplay();
-            timerInterval = setInterval(() => {
-                updateTimerDisplay();
-                
-                // Check if time limit reached (speed round)
-                if (sessionTimeLimit) {
-                    const elapsed = Date.now() - sessionStartTime;
-                    if (elapsed >= sessionTimeLimit) {
-                        endSession();
-                    }
-                }
-            }, 1000);
-        }
-
-        function updateTimerDisplay() {
-            const elapsed = Date.now() - sessionStartTime;
-            const totalSeconds = Math.floor(elapsed / 1000);
-            const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-            
-            let display = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-            
-            // Show countdown for speed round
-            if (sessionTimeLimit) {
-                const remaining = sessionTimeLimit - elapsed;
-                const remainingSeconds = Math.floor(remaining / 1000);
-                const remainingMinutes = Math.floor(remainingSeconds / 60);
-                const remainingSecs = remainingSeconds % 60;
-                display = `${remainingMinutes}:${remainingSecs.toString().padStart(2, '0')}`;
-                
-                // Warning color when < 2 minutes
-                if (remaining < 120000) {
-                    document.getElementById('timer').classList.add('text-red-600');
-                }
-            }
-            
-            document.getElementById('timer').textContent = display;
-            
-            // Update question time
-            const questionElapsed = Math.floor((Date.now() - questionStartTime) / 1000);
-            document.getElementById('questionTime').textContent = `Time: ${questionElapsed}s`;
-        }
-
-        // Display current question
-        function displayQuestion() {
-            if (sessionQuestions.length === 0) return;
-            
-            const question = sessionQuestions[currentIndex];
-            const questionKey = `${question.exam_source}_${question.question_number}`;
-            
-            // Reset question timer
-            questionStartTime = Date.now();
-            
-            // Update stats
-            document.getElementById('currentQuestion').textContent = `${currentIndex + 1} / ${sessionQuestions.length}`;
-            
-            // Update badges
-            document.getElementById('categoryBadge').textContent = question.category;
-            document.getElementById('examSource').textContent = question.exam_source.replace('_', ' ').toUpperCase();
-            
-            // Update question text
-            document.getElementById('questionText').textContent = 
-                `${question.question_number}. ${question.question_text}`;
-            
-            // Create options
-            const options = [
-                { letter: 'A', text: question.option_a },
-                { letter: 'B', text: question.option_b },
-                { letter: 'C', text: question.option_c },
-                { letter: 'D', text: question.option_d }
-            ];
-            
-            const userAnswer = sessionAnswers[questionKey];
-            
-            let optionsHtml = '';
-            for (const opt of options) {
-                let classes = 'option-btn p-4 border-2 rounded-lg cursor-pointer transition hover:border-blue-500';
-                
-                if (userAnswer) {
-                    if (opt.letter === question.correct_answer) {
-                        classes += ' border-green-500 bg-green-50';
-                    } else if (opt.letter === userAnswer.answer) {
-                        classes += ' border-red-500 bg-red-50';
-                    } else {
-                        classes += ' border-gray-200 opacity-60';
-                    }
-                } else {
-                    classes += ' border-gray-300';
-                }
-                
-                const disabled = userAnswer ? 'style="pointer-events: none;"' : '';
-                optionsHtml += `
-                    <div class="${classes}" ${disabled} onclick="selectAnswer('${opt.letter}')">
-                        <span class="font-bold text-blue-600">${opt.letter})</span>
-                        <span class="ml-2">${opt.text}</span>
-                    </div>
-                `;
-            }
-            
-            document.getElementById('optionsContainer').innerHTML = optionsHtml;
-            
-            // Show result if already answered
-            if (userAnswer) {
-                showResult(userAnswer.answer, question.correct_answer, question.regulation_reference);
-            } else {
-                document.getElementById('resultMessage').classList.add('hidden');
-            }
-            
-            // Update navigation buttons
-            document.getElementById('prevButton').disabled = currentIndex === 0;
-            document.getElementById('nextButton').textContent = 
-                currentIndex === sessionQuestions.length - 1 ? 'Finish' : 'Next →';
-            
-            updateScore();
-        }
-
-        // Select answer
-        function selectAnswer(selected) {
-            const question = sessionQuestions[currentIndex];
-            const questionKey = `${question.exam_source}_${question.question_number}`;
-            
-            if (sessionAnswers[questionKey]) return; // Already answered
-            
-            const timeSpent = Math.floor((Date.now() - questionStartTime) / 1000);
-            
-            sessionAnswers[questionKey] = {
-                answer: selected,
-                correct: question.correct_answer,
-                timeSpent: timeSpent,
-                category: question.category,
-                regulation: question.regulation_reference,
-                questionText: question.question_text,
-                questionNumber: question.question_number,
-                examSource: question.exam_source
-            };
-            
-            // Track recurring errors
-            if (selected !== question.correct_answer) {
-                trackError(questionKey, question);
-            }
-            
-            showResult(selected, question.correct_answer, question.regulation_reference);
-            updateScore();
-            displayQuestion(); // Refresh to show answer
-        }
-
-        // Show result
-        function showResult(selected, correct, reference) {
-            const resultDiv = document.getElementById('resultMessage');
-            const resultText = document.getElementById('resultText');
-            const explanationText = document.getElementById('explanationText');
-            
-            if (selected === correct) {
-                resultDiv.className = 'mt-6 p-4 rounded-lg bg-green-50 border-2 border-green-500';
-                resultText.textContent = '✓ Correct!';
-                resultText.className = 'font-semibold mb-2 text-green-800';
-            } else {
-                resultDiv.className = 'mt-6 p-4 rounded-lg bg-red-50 border-2 border-red-500';
-                resultText.textContent = `✗ Incorrect. The correct answer is ${correct}.`;
-                resultText.className = 'font-semibold mb-2 text-red-800';
-            }
-            
-            explanationText.textContent = `Regulation Reference: ${reference}`;
-            resultDiv.classList.remove('hidden');
-        }
-
-        // Update score
-        function updateScore() {
-            const answered = Object.keys(sessionAnswers).length;
-            const correct = Object.values(sessionAnswers).filter(a => a.answer === a.correct).length;
-            
-            document.getElementById('answeredCount').textContent = answered;
-            document.getElementById('correctCount').textContent = correct;
-            
-            if (answered > 0) {
-                const percentage = Math.round((correct / answered) * 100);
-                document.getElementById('score').textContent = percentage + '%';
-            }
-        }
-
-        // Navigation
-        function previousQuestion() {
-            if (currentIndex > 0) {
-                currentIndex--;
-                displayQuestion();
-            }
-        }
-
-        function nextQuestion() {
-            if (currentIndex < sessionQuestions.length - 1) {
-                currentIndex++;
-                displayQuestion();
-            } else {
-                endSession();
-            }
-        }
-
-        // End session
-        function endSession() {
-            console.log('🔴 endSession() called!');
-            console.log('Current state:', {
-                currentMode: currentMode,
-                currentIndex: currentIndex,
-                sessionStartTime: sessionStartTime,
-                timerInterval: timerInterval
-            });
-            
-            clearInterval(timerInterval);
-            console.log('✅ Timer cleared');
-            
-            // Save session to localStorage
-            const session = {
-                mode: currentMode,
-                date: new Date().toISOString(),
-                duration: Date.now() - sessionStartTime,
-                totalQuestions: sessionQuestions.length,
-                answered: Object.keys(sessionAnswers).length,
-                correct: Object.values(sessionAnswers).filter(a => a.answer === a.correct).length,
-                answers: sessionAnswers
-            };
-            
-            saveSession(session);
-            
-            // Show encouragement message based on performance
-            const accuracy = session.answered > 0 ? Math.round((session.correct / session.answered) * 100) : 0;
-            showSessionCompleteMessage(accuracy, session.answered, session.correct);
-            
-            // Show results after a delay
-            setTimeout(() => {
-                showResults();
-            }, 2000);
-        }
-        
-        // Show session complete message with trade puns
-        function showSessionCompleteMessage(accuracy, answered, correct) {
-            let message = '';
-            let emoji = '';
-            
-            if (accuracy >= 90) {
-                const messages = [
-                    "🎉 CLEARED CUSTOMS! You're absolutely crushing it!",
-                    "🚢 DUTY-FREE EXCELLENCE! Your knowledge is import-ant!",
-                    "⚡ NO TARIFFS ON THIS PERFORMANCE! Absolutely stellar!",
-                    "🎯 EXPEDITED CLEARANCE! You're a classification champion!",
-                    "🏆 BONDED BRILLIANCE! You're ready to broker some deals!"
-                ];
-                message = messages[Math.floor(Math.random() * messages.length)];
-                emoji = '🎉';
-            } else if (accuracy >= 75) {
-                const messages = [
-                    "✅ ENTRY APPROVED! That's a passing score - you're licensed material!",
-                    "📋 COMPLIANT & CONFIDENT! You just passed the exam threshold!",
-                    "🎊 CLEARED FOR ENTRY! 75%+ means you're broker-ready!",
-                    "🌟 HARMONIZED SUCCESS! You're in the passing zone!",
-                    "💪 DUTY PAID IN FULL! That's exam-passing performance!"
-                ];
-                message = messages[Math.floor(Math.random() * messages.length)];
-                emoji = '✅';
-            } else if (accuracy >= 60) {
-                const messages = [
-                    "📦 GOOD PROGRESS! You're in the right classification!",
-                    "🔍 SOLID WORK! Your knowledge is being properly valued!",
-                    "💼 GETTING THERE! Keep studying - you're on the right tariff schedule!",
-                    "📊 NICE EFFORT! You're building your customs expertise!",
-                    "🎯 WELL DONE! Keep practicing - you're importing knowledge!"
-                ];
-                message = messages[Math.floor(Math.random() * messages.length)];
-                emoji = '📦';
-            } else {
-                const messages = [
-                    "📚 KEEP STUDYING! Every broker started here - you're building your foundation!",
-                    "💪 PRACTICE MAKES PERFECT! Even the best brokers had to learn the CFR!",
-                    "🌱 GROWING YOUR EXPERTISE! Rome wasn't built in a day, and neither is customs knowledge!",
-                    "🎓 LEARNING MODE ACTIVATED! You're on the right track - keep going!",
-                    "🔨 BUILDING SKILLS! Every question is a step toward that license!"
-                ];
-                message = messages[Math.floor(Math.random() * messages.length)];
-                emoji = '📚';
-            }
-            
-            // Show modal
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
-            modal.innerHTML = `
-                <div class="bg-white rounded-lg p-8 max-w-md mx-4 text-center animate-bounce-in">
-                    <div class="text-6xl mb-4">${emoji}</div>
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800">${message}</h2>
-                    <div class="text-4xl font-bold mb-2 ${accuracy >= 75 ? 'text-green-600' : accuracy >= 60 ? 'text-blue-600' : 'text-orange-600'}">${accuracy}%</div>
-                    <div class="text-gray-600 mb-4">${correct}/${answered} correct</div>
-                    <div class="text-sm text-gray-500">Loading your results...</div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            
-            setTimeout(() => {
-                modal.remove();
-            }, 2000);
-        }
-
-        // Save session to localStorage
-        function saveSession(session) {
-            const sessions = JSON.parse(localStorage.getItem(STORAGE_KEYS.SESSIONS) || '[]');
-            sessions.unshift(session); // Add to beginning
-            
-            // Keep last 50 sessions
-            if (sessions.length > 50) {
-                sessions.pop();
-            }
-            
-            localStorage.setItem(STORAGE_KEYS.SESSIONS, JSON.stringify(sessions));
-        }
-
-        // Track recurring errors
-        function trackError(questionKey, question) {
-            const errors = JSON.parse(localStorage.getItem(STORAGE_KEYS.ERRORS) || '{}');
-            
-            if (!errors[questionKey]) {
-                errors[questionKey] = {
-                    count: 0,
-                    question: question.question_text,
-                    correctAnswer: question.correct_answer,
-                    regulation: question.regulation_reference,
-                    category: question.category,
-                    examSource: question.exam_source,
-                    questionNumber: question.question_number
-                };
-            }
-            
-            errors[questionKey].count++;
-            errors[questionKey].lastMissed = new Date().toISOString();
-            
-            localStorage.setItem(STORAGE_KEYS.ERRORS, JSON.stringify(errors));
-        }
-
-        // Show results screen
-        function showResults() {
-            document.getElementById('modeSelection').classList.add('hidden');
-            document.getElementById('practiceScreen').classList.add('hidden');
-            document.getElementById('resultsScreen').classList.remove('hidden');
-            
-            const sessions = JSON.parse(localStorage.getItem(STORAGE_KEYS.SESSIONS) || '[]');
-            const errors = JSON.parse(localStorage.getItem(STORAGE_KEYS.ERRORS) || '{}');
-            
-            // Calculate overall stats
-            let totalAttempted = 0;
-            let totalCorrect = 0;
-            let totalTime = 0;
-            let totalAnswers = 0;
-            
-            sessions.forEach(session => {
-                totalAttempted += session.answered;
-                totalCorrect += session.correct;
-                Object.values(session.answers).forEach(answer => {
-                    totalTime += answer.timeSpent;
-                    totalAnswers++;
-                });
-            });
-            
-            document.getElementById('totalSessions').textContent = sessions.length;
-            document.getElementById('totalAttempted').textContent = totalAttempted;
-            const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
-            document.getElementById('overallAccuracy').textContent = overallAccuracy + '%';
-            document.getElementById('avgTime').textContent = 
-                totalAnswers > 0 ? Math.round(totalTime / totalAnswers) + 's' : '0s';
-            
-            // Show encouragement banner based on overall performance
-            showEncouragementBanner(overallAccuracy, sessions.length, totalAttempted);
-            
-            // Show recurring errors (sorted by count)
-            const sortedErrors = Object.entries(errors)
-                .sort((a, b) => b[1].count - a[1].count)
-                .slice(0, 10);
-            
-            let errorsHtml = '';
-            if (sortedErrors.length === 0) {
-                errorsHtml = '<p class="text-gray-500">No recurring errors yet. Keep practicing!</p>';
-            } else {
-                sortedErrors.forEach(([key, error]) => {
-                    errorsHtml += `
-                        <div class="border-l-4 border-red-500 pl-4 py-2">
-                            <div class="flex justify-between items-start mb-2">
-                                <div class="font-semibold text-gray-800">Q${error.questionNumber} - ${error.category}</div>
-                                <div class="text-red-600 font-bold">Missed ${error.count}x</div>
-                            </div>
-                            <div class="text-sm text-gray-700 mb-2">${error.question}</div>
-                            <div class="text-sm text-green-700">✓ Correct Answer: ${error.correctAnswer}</div>
-                            <div class="text-xs text-gray-500 mt-1">${error.regulation}</div>
-                        </div>
-                    `;
-                });
-            }
-            document.getElementById('recurringErrors').innerHTML = errorsHtml;
-            
-            // Show session history
-            let historyHtml = '';
-            if (sessions.length === 0) {
-                historyHtml = '<p class="text-gray-500">No sessions yet. Start practicing!</p>';
-            } else {
-                sessions.slice(0, 10).forEach(session => {
-                    const date = new Date(session.date);
-                    const duration = Math.round(session.duration / 60000); // minutes
-                    const accuracy = Math.round((session.correct / session.answered) * 100);
-                    const passed = accuracy >= 75;
-                    
-                    historyHtml += `
-                        <div class="border rounded-lg p-4 ${passed ? 'border-green-300 bg-green-50' : 'border-gray-300'}">
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <div class="font-semibold">${session.mode.toUpperCase()} Mode</div>
-                                    <div class="text-sm text-gray-600">${date.toLocaleDateString()} ${date.toLocaleTimeString()}</div>
-                                </div>
-                                <div class="text-right">
-                                    <div class="text-2xl font-bold ${passed ? 'text-green-600' : 'text-orange-600'}">${accuracy}%</div>
-                                    <div class="text-xs text-gray-600">${session.correct}/${session.answered}</div>
-                                </div>
-                            </div>
-                            <div class="text-sm text-gray-600">
-                                Duration: ${duration} min | Questions: ${session.totalQuestions}
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-            document.getElementById('sessionHistory').innerHTML = historyHtml;
-            
-            // Category breakdown
-            const categoryStats = {};
-            sessions.forEach(session => {
-                Object.values(session.answers).forEach(answer => {
-                    if (!categoryStats[answer.category]) {
-                        categoryStats[answer.category] = { correct: 0, total: 0, totalTime: 0 };
-                    }
-                    categoryStats[answer.category].total++;
-                    categoryStats[answer.category].totalTime += answer.timeSpent;
-                    if (answer.answer === answer.correct) {
-                        categoryStats[answer.category].correct++;
-                    }
-                });
-            });
-            
-            let categoryHtml = '';
-            Object.entries(categoryStats).forEach(([category, stats]) => {
-                const accuracy = Math.round((stats.correct / stats.total) * 100);
-                const avgTime = Math.round(stats.totalTime / stats.total);
-                
-                categoryHtml += `
-                    <div class="mb-4">
-                        <div class="flex justify-between text-sm mb-1">
-                            <span class="font-medium">${category}</span>
-                            <span class="text-gray-600">${stats.correct}/${stats.total} (${accuracy}%) • Avg ${avgTime}s</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full" style="width: ${accuracy}%"></div>
-                        </div>
-                    </div>
-                `;
-            });
-            document.getElementById('categoryBreakdown').innerHTML = categoryHtml || '<p class="text-gray-500">No data yet.</p>';
-        }
-
-        // Show encouragement banner on results page
-        function showEncouragementBanner(accuracy, sessionCount, totalAttempted) {
-            let bannerHtml = '';
-            
-            if (accuracy >= 85) {
-                bannerHtml = `
-                    <div class="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-500 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-2">🏆</div>
-                        <h3 class="text-2xl font-bold text-green-800 mb-2">CUSTOMS CHAMPION!</h3>
-                        <p class="text-lg text-gray-700 mb-2">You're absolutely <strong>crushing</strong> it with ${accuracy}% accuracy!</p>
-                        <p class="text-gray-600">Your cargo is <em>expedited</em> through customs - you're ready for that license! 🚢</p>
-                    </div>
-                `;
-            } else if (accuracy >= 75) {
-                bannerHtml = `
-                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-500 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-2">✅</div>
-                        <h3 class="text-2xl font-bold text-blue-800 mb-2">ENTRY APPROVED!</h3>
-                        <p class="text-lg text-gray-700 mb-2">${accuracy}% means you're hitting <strong>passing scores</strong>!</p>
-                        <p class="text-gray-600">Your knowledge has been <em>properly classified</em> - keep this momentum! 📋</p>
-                    </div>
-                `;
-            } else if (accuracy >= 60) {
-                bannerHtml = `
-                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-500 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-2">📦</div>
-                        <h3 class="text-2xl font-bold text-purple-800 mb-2">SOLID PROGRESS!</h3>
-                        <p class="text-lg text-gray-700 mb-2">You're at ${accuracy}% - your knowledge is being <strong>properly valued</strong>!</p>
-                        <p class="text-gray-600">Just a few more points to clear the 75% threshold. You're on the right <em>tariff schedule</em>! 💪</p>
-                    </div>
-                `;
-            } else if (sessionCount >= 5) {
-                bannerHtml = `
-                    <div class="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-500 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-2">🌱</div>
-                        <h3 class="text-2xl font-bold text-amber-800 mb-2">DEDICATION DETECTED!</h3>
-                        <p class="text-lg text-gray-700 mb-2">${sessionCount} sessions completed - you're <strong>importing knowledge</strong> every day!</p>
-                        <p class="text-gray-600">Every broker started here. Keep studying - your <em>entry</em> into this profession is coming! 📚</p>
-                    </div>
-                `;
-            } else {
-                bannerHtml = `
-                    <div class="bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-400 rounded-lg p-6 text-center">
-                        <div class="text-4xl mb-2">🚀</div>
-                        <h3 class="text-2xl font-bold text-blue-800 mb-2">WELCOME ABOARD!</h3>
-                        <p class="text-lg text-gray-700 mb-2">You've attempted ${totalAttempted} questions - great start!</p>
-                        <p class="text-gray-600">Every customs broker started exactly where you are. Keep practicing - your <em>clearance</em> is coming! 💼</p>
-                    </div>
-                `;
-            }
-            
-            document.getElementById('encouragementBanner').innerHTML = bannerHtml;
-        }
-        
-        // Back to mode selection
-        function backToModes() {
-            document.getElementById('resultsScreen').classList.add('hidden');
-            document.getElementById('funFactsScreen').classList.add('hidden');
-            document.getElementById('testPrepScreen').classList.add('hidden');
-            document.getElementById('modeSelection').classList.remove('hidden');
-        }
-
-        // Show fun facts screen
-        function showFunFacts() {
-            document.getElementById('modeSelection').classList.add('hidden');
-            document.getElementById('practiceScreen').classList.add('hidden');
-            document.getElementById('resultsScreen').classList.add('hidden');
-            document.getElementById('testPrepScreen').classList.add('hidden');
-            document.getElementById('funFactsScreen').classList.remove('hidden');
-        }
-
-        // Show test prep screen
-        function showTestPrep() {
-            document.getElementById('modeSelection').classList.add('hidden');
-            document.getElementById('practiceScreen').classList.add('hidden');
-            document.getElementById('resultsScreen').classList.add('hidden');
-            document.getElementById('funFactsScreen').classList.add('hidden');
-            document.getElementById('testPrepScreen').classList.remove('hidden');
-        }
-
-        // Utility: Shuffle array
-        function shuffleArray(array) {
-            const shuffled = [...array];
-            for (let i = shuffled.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-            }
-            return shuffled;
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (document.getElementById('practiceScreen').classList.contains('hidden')) return;
-            
-            if (e.key === 'ArrowLeft') previousQuestion();
-            if (e.key === 'ArrowRight') nextQuestion();
-            if (e.key >= '1' && e.key <= '4') {
-                const letters = ['A', 'B', 'C', 'D'];
-                selectAnswer(letters[parseInt(e.key) - 1]);
-            }
+    function showResourceTab(tab) {
+        document.querySelectorAll('.resource-panel').forEach(p => p.classList.add('hidden'));
+        document.getElementById('tab-'+tab).classList.remove('hidden');
+        document.querySelectorAll('.resource-tab').forEach(btn => {
+            btn.classList.remove('bg-espresso','text-cream','border-espresso');
+            btn.classList.add('bg-white','text-bark/60','border-toast/60');
         });
+        const active = document.querySelector(`.resource-tab[data-tab="${tab}"]`);
+        active.classList.remove('bg-white','text-bark/60','border-toast/60');
+        active.classList.add('bg-espresso','text-cream','border-espresso');
+    }
+    function showHome() { 
+        if(session.timer) clearInterval(session.timer);
+        hideAll(); document.getElementById('homeScreen').classList.remove('hidden'); 
+        renderQuickStats();
+    }
+    function showTestSetup() { hideAll(); document.getElementById('testSetup').classList.remove('hidden'); }
+    function showStats() { hideAll(); document.getElementById('statsScreen').classList.remove('hidden'); renderStats(); }
+    function showResources() { hideAll(); document.getElementById('resourcesScreen').classList.remove('hidden'); }
 
-        // Initialize
-        loadQuestions();
-    </script>
+    // ============================================================
+    // MODES
+    // ============================================================
+    function startSpeedRound() {
+        session = { mode:'speed', qs:shuffle([...ALL_QS]), idx:0, answers:{}, start:Date.now(), timer:null, source:'Speed Round' };
+        hideAll(); document.getElementById('studyScreen').classList.remove('hidden');
+        document.getElementById('timer').classList.remove('hidden');
+        startTimer(600);
+        render();
+    }
+    function startFreeStudy() {
+        session = { mode:'free', qs:shuffle([...ALL_QS]), idx:0, answers:{}, start:Date.now(), timer:null, source:'Free Study' };
+        hideAll(); document.getElementById('studyScreen').classList.remove('hidden');
+        document.getElementById('timer').classList.add('hidden');
+        render();
+    }
+    function startPracticeTest(src) {
+        let qs;
+        let label;
+        if(src==='random') { qs = shuffle([...ALL_QS]).slice(0,80); label='Random Mix'; }
+        else { qs = ALL_QS.filter(q=>q.exam_source===src); label=fmtExam(src); }
+        session = { mode:'practice', qs, idx:0, answers:{}, start:Date.now(), timer:null, source:label };
+        hideAll(); document.getElementById('studyScreen').classList.remove('hidden');
+        document.getElementById('timer').classList.add('hidden');
+        render();
+    }
 
-    <style>
-        .option-btn {
-            user-select: none;
+    // ============================================================
+    // TIMER
+    // ============================================================
+    function startTimer(secs) {
+        let rem = secs;
+        updTimer(rem);
+        session.timer = setInterval(()=>{
+            rem--;
+            updTimer(rem);
+            if(rem<=0){ clearInterval(session.timer); endSession(); }
+        },1000);
+    }
+    function updTimer(s) {
+        const m=Math.floor(s/60), sec=s%60;
+        document.getElementById('timer').textContent = `${m}:${String(sec).padStart(2,'0')}`;
+        if(s<=60) document.getElementById('timer').classList.add('animate-pulse');
+    }
+
+    // ============================================================
+    // RENDER QUESTION
+    // ============================================================
+    function render() {
+        const q = session.qs[session.idx];
+        if(!q) return;
+
+        const total = session.qs.length;
+        document.getElementById('progress').textContent = `${session.idx+1}/${total}`;
+        document.getElementById('progressBar').style.width = `${((session.idx+1)/total)*100}%`;
+
+        // Score
+        const answered = Object.keys(session.answers).length;
+        const correct = Object.entries(session.answers).filter(([i,a])=>a===session.qs[i].correct_answer).length;
+        document.getElementById('scoreDisplay').textContent = answered ? `${Math.round(correct/answered*100)}%` : '0%';
+
+        // Category
+        document.getElementById('catPill').textContent = q.category;
+
+        // Question
+        document.getElementById('questionText').textContent = q.question_text;
+
+        // Options
+        const opts = [{l:'A',t:q.option_a},{l:'B',t:q.option_b},{l:'C',t:q.option_c},{l:'D',t:q.option_d}];
+        const ans = session.answers[session.idx];
+        let html = '';
+        opts.forEach(o => {
+            let cls = 'option-btn rounded-xl border p-4 cursor-pointer';
+            let badge = '';
+            if(ans !== undefined) {
+                cls += ' locked';
+                if(o.l === q.correct_answer) { cls += ' border-moss/50 bg-moss/5'; badge = '<span class="text-moss text-xs font-bold ml-auto">✓</span>'; }
+                else if(o.l === ans && ans !== q.correct_answer) { cls += ' border-red-300 bg-red-50/50'; badge = '<span class="text-red-400 text-xs font-bold ml-auto">✗</span>'; }
+                else { cls += ' border-toast/40 opacity-50'; }
+            } else {
+                cls += ' border-toast/60 hover:border-caramel/40';
+            }
+            html += `<div class="${cls}" onclick="answer('${o.l}')">
+                <div class="flex items-start gap-3">
+                    <span class="text-xs font-bold text-bark/30 mt-0.5 shrink-0 w-4">${o.l}</span>
+                    <span class="text-sm text-bark/80 leading-relaxed flex-1">${o.t}</span>
+                    ${badge}
+                </div>
+            </div>`;
+        });
+        document.getElementById('options').innerHTML = html;
+
+        // Feedback
+        if(ans !== undefined) showFeedback(q, ans);
+        else document.getElementById('feedback').classList.add('hidden');
+
+        // Nav
+        document.getElementById('prevBtn').disabled = session.idx === 0;
+        document.getElementById('nextBtn').textContent = session.idx === total-1 ? 'Finish →' : 'Next →';
+    }
+
+    // ============================================================
+    // ANSWER + FEEDBACK
+    // ============================================================
+    function answer(letter) {
+        if(session.answers[session.idx] !== undefined) return;
+        session.answers[session.idx] = letter;
+        render();
+    }
+
+    function showFeedback(q, ans) {
+        const correct = ans === q.correct_answer;
+        const fb = document.getElementById('feedback');
+        let html = '';
+        if(correct) {
+            html = `<div class="bg-moss/5 border border-moss/20 rounded-xl p-4">
+                <p class="text-moss text-sm font-medium">Correct.</p>
+                ${q.regulation_reference ? `<p class="text-bark/40 text-xs mt-1">${q.regulation_reference}</p>` : ''}
+            </div>`;
+        } else {
+            const tip = getTip(q);
+            html = `<div class="bg-red-50 border border-red-100 rounded-xl p-4 mb-3">
+                <p class="text-red-600 text-sm font-medium">Answer: ${q.correct_answer}</p>
+                ${q.regulation_reference ? `<p class="text-bark/40 text-xs mt-1">${q.regulation_reference}</p>` : ''}
+            </div>`;
+            if(tip) {
+                html += `<div class="bagel-says rounded-xl p-4">
+                    <p class="text-bark/70 text-sm">${tip}</p>
+                </div>`;
+            }
         }
-    </style>
+        fb.innerHTML = html;
+        fb.classList.remove('hidden');
+    }
+
+    // ============================================================
+    // TIPS ENGINE
+    // ============================================================
+    const TIPS = {
+        'Classification': [
+            "Multiple answer choices in the same chapter? That's your signal to check chapter notes and subheading notes. The distinction is almost always there.",
+            "GRI 1 resolves most classification questions. Read the heading text and section/chapter notes before reaching for GRI 3.",
+            "They love pulling verbatim text from chapter notes as wrong answers. Read the actual note - one word can change the classification entirely.",
+            "If a product has multiple functions or materials, think essential character (GRI 3b). What gives it its fundamental purpose?",
+            "Section notes can exclude entire product categories from a section. Always check them first.",
+        ],
+        'Entry/Entry Summary': [
+            "Count the days carefully. 10 days, 15 days, 180 days - CBP tests whether you know which timeline applies to which action.",
+            "Protest deadline: 180 days from liquidation. Not from entry date. Not from release. From the date of liquidation. They will try to confuse you.",
+            "When a question cites a specific CFR section, the answer is usually the exact regulatory text. Don't paraphrase in your head.",
+            "Know your entry types cold: consumption, warehouse, FTZ, TIB. They test the differences constantly.",
+            "Bond questions: continuous bonds cover multiple entries, single-transaction bonds cover one. Amounts and conditions differ.",
+        ],
+        'Valuation, Appraisement and Duty Assessment': [
+            "Transaction value is always Method 1. The other five methods only apply when transaction value can't be determined. Know why it might fail.",
+            "Assists add to dutiable value. Buying commissions don't. Selling commissions do. This shows up on every exam.",
+            "Related party transactions aren't automatically disqualified. They just need to demonstrate the relationship didn't influence the price.",
+            "Currency conversion uses the rate on the date of export, not the date of import or entry.",
+            "Deductions: international freight (FOB), insurance, and post-importation costs come OFF the transaction value.",
+        ],
+        'Broker Compliance': [
+            "Part 111 is tested heavily. Responsible supervision, record retention (5 years from date of entry), notification requirements.",
+            "License is national. Permit is district-specific. You need both to operate in a port.",
+            "Triennial status report: every 3 years. Miss it and your license can be suspended.",
+            "Record retention: 5 years from date of entry. Not from liquidation date. Not from filing date.",
+            "Know what triggers mandatory reporting to CBP: address changes, name changes, employee felony convictions.",
+        ],
+        'Practical Exercise': [
+            "Read the entire scenario before looking at the question. Every detail is there for a reason.",
+            "These test application, not recall. Walk through the scenario step by step using the regulations.",
+            "Watch for irrelevant details planted to distract you. Not every fact in the scenario matters for the specific question asked.",
+        ],
+        'Modernized Drawback': [
+            "Drawback = getting duties refunded. Three types: manufacturing, unused merchandise, rejected merchandise.",
+            "5-year rule: claim must be filed within 5 years of the designated merchandise's importation date.",
+            "Substitution drawback requires commercially interchangeable goods. Same tariff classification alone isn't sufficient.",
+        ],
+    };
+    const GENERAL = [
+        "If two answers use regulatory language and two don't, the answer is almost certainly one of the regulatory ones.",
+        "When stuck between two options, ask: which uses the precise CFR terminology? That's usually correct.",
+        "Spending more than 4 minutes? Flag it and move on. Come back with fresh eyes.",
+        "This is open book. Your advantage isn't memorization - it's navigation speed. Practice finding sections fast.",
+    ];
+
+    function getTip(q) {
+        const pool = [...(TIPS[q.category]||[]), ...GENERAL];
+        return pool[Math.floor(Math.random()*pool.length)];
+    }
+
+    // ============================================================
+    // NAV
+    // ============================================================
+    function goPrev() { if(session.idx>0){ session.idx--; render(); } }
+    function goNext() { 
+        if(session.idx < session.qs.length-1){ session.idx++; render(); }
+        else endSession();
+    }
+    function exitStudy() {
+        if(Object.keys(session.answers).length > 0 && !confirm('End session? Progress will be saved.')) return;
+        if(Object.keys(session.answers).length > 0) endSession();
+        else showHome();
+    }
+
+    // ============================================================
+    // END SESSION
+    // ============================================================
+    function endSession() {
+        if(session.timer) clearInterval(session.timer);
+        const total = Object.keys(session.answers).length;
+        if(!total) { showHome(); return; }
+
+        let correct=0, missed=[];
+        Object.entries(session.answers).forEach(([i,a])=>{
+            const q=session.qs[i];
+            if(a===q.correct_answer) correct++;
+            else missed.push({q,a,i:+i});
+        });
+        const score = Math.round(correct/total*100);
+        const dur = Math.round((Date.now()-session.start)/1000);
+        const catBD = getCatBreakdown();
+
+        saveHist({mode:session.mode, score, correct, total, dur, source:session.source, date:new Date().toISOString(), cats:catBD});
+        showResults(score, correct, total, dur, missed, catBD);
+    }
+
+    function getCatBreakdown() {
+        const bd={};
+        Object.entries(session.answers).forEach(([i,a])=>{
+            const q=session.qs[i];
+            if(!bd[q.category]) bd[q.category]={c:0,t:0};
+            bd[q.category].t++;
+            if(a===q.correct_answer) bd[q.category].c++;
+        });
+        return bd;
+    }
+
+    // ============================================================
+    // RESULTS
+    // ============================================================
+    function showResults(score, correct, total, dur, missed, cats) {
+        hideAll(); document.getElementById('resultsScreen').classList.remove('hidden');
+
+        const passed = score >= 75;
+        document.getElementById('resultScore').textContent = `${score}%`;
+        document.getElementById('resultScore').className = `font-display text-6xl font-bold mb-2 ${passed?'text-moss':'text-red-500'}`;
+        document.getElementById('resultLabel').textContent = `${correct}/${total} correct · ${fmtDur(dur)} · ${session.source}`;
+
+        // Bagel commentary
+        let msg;
+        if(score>=90) msg = "Well. You clearly don't need me. But I'll stick around anyway. Impressive work.";
+        else if(score>=75) msg = "You passed. Not by a mile, but passing is passing. Keep sharpening the weak spots.";
+        else if(score>=60) msg = "Close. You know enough to be dangerous but not enough to be licensed. Focus on the categories below where you're under 75%.";
+        else if(score>=40) msg = "We have work to do. That's fine - that's literally why I'm here. Look at what you're getting wrong and drill those sections.";
+        else msg = "I'm going for a walk. When I get back, open your CFR to Part 111 and just start reading. We'll try again when you're ready.";
+        
+        document.getElementById('resultBagelSays').innerHTML = `<p class="text-bark/70 text-sm">${msg}</p>`;
+
+        // Category bars
+        let catHtml = '<h3 class="font-bold text-sm mb-4">By category</h3>';
+        Object.entries(cats).sort((a,b)=>(a[1].c/a[1].t)-(b[1].c/b[1].t)).forEach(([cat,d])=>{
+            const pct = Math.round(d.c/d.t*100);
+            const color = pct>=75?'bg-moss':pct>=50?'bg-caramel':'bg-red-400';
+            catHtml += `<div class="mb-3">
+                <div class="flex justify-between text-xs mb-1"><span class="text-bark/60">${cat}</span><span class="text-bark/40">${d.c}/${d.t} (${pct}%)</span></div>
+                <div class="w-full h-1.5 bg-toast/50 rounded-full overflow-hidden"><div class="${color} h-full rounded-full" style="width:${pct}%"></div></div>
+            </div>`;
+        });
+        document.getElementById('categoryResults').innerHTML = catHtml;
+
+        // Missed
+        if(missed.length) {
+            let mHtml = '<h3 class="font-bold text-sm mb-4">Review these</h3><div class="space-y-4">';
+            missed.slice(0,8).forEach(({q,a})=>{
+                const tip = getTip(q);
+                mHtml += `<div class="border-b border-toast/30 pb-4">
+                    <p class="text-bark/70 text-sm mb-2">${q.question_text.substring(0,180)}${q.question_text.length>180?'...':''}</p>
+                    <div class="flex gap-3 text-xs mb-1"><span class="text-red-400">You: ${a}</span><span class="text-moss">Answer: ${q.correct_answer}</span></div>
+                    ${q.regulation_reference?`<p class="text-bark/30 text-xs">${q.regulation_reference}</p>`:''}
+                    ${tip?`<p class="text-bark/50 text-xs mt-2 italic">💡 ${tip}</p>`:''}
+                </div>`;
+            });
+            if(missed.length>8) mHtml += `<p class="text-bark/40 text-xs">+ ${missed.length-8} more to review</p>`;
+            mHtml += '</div>';
+            document.getElementById('missedReview').innerHTML = mHtml;
+        }
+    }
+
+    // ============================================================
+    // STATS
+    // ============================================================
+    function renderStats() {
+        const h = getHist();
+        if(!h.length) {
+            document.getElementById('statsContent').innerHTML = `<div class="bg-warm rounded-xl p-8 text-center"><p class="text-bark/50">Nothing here yet. Go study.</p></div>`;
+            return;
+        }
+        const totalQ = h.reduce((s,x)=>s+x.total,0);
+        const avgScore = Math.round(h.reduce((s,x)=>s+x.score,0)/h.length);
+        const passing = h.filter(x=>x.score>=75).length;
+
+        let html = `<div class="grid grid-cols-3 gap-4 mb-8">
+            <div class="bg-white rounded-xl border border-toast/60 p-4 text-center">
+                <div class="font-display text-2xl font-bold text-espresso">${h.length}</div><div class="text-xs text-bark/40 mt-1">Sessions</div>
+            </div>
+            <div class="bg-white rounded-xl border border-toast/60 p-4 text-center">
+                <div class="font-display text-2xl font-bold ${avgScore>=75?'text-moss':'text-caramel'}">${avgScore}%</div><div class="text-xs text-bark/40 mt-1">Average</div>
+            </div>
+            <div class="bg-white rounded-xl border border-toast/60 p-4 text-center">
+                <div class="font-display text-2xl font-bold text-espresso">${totalQ}</div><div class="text-xs text-bark/40 mt-1">Questions</div>
+            </div>
+        </div>`;
+
+        html += '<div class="bg-white rounded-xl border border-toast/60 p-5 mb-6"><h3 class="font-bold text-sm mb-4">Recent sessions</h3><div class="space-y-3">';
+        h.slice(-8).reverse().forEach(s=>{
+            const d = new Date(s.date).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+            html += `<div class="flex items-center justify-between text-sm py-1 border-b border-toast/20 last:border-0">
+                <div class="flex items-center gap-3"><span class="text-bark/30 text-xs">${d}</span><span class="text-bark/60">${s.source||s.mode}</span></div>
+                <span class="font-medium ${s.score>=75?'text-moss':'text-red-400'}">${s.score}%</span>
+            </div>`;
+        });
+        html += '</div></div>';
+
+        // All-time category
+        const allCats = {};
+        h.forEach(s=>{ if(s.cats) Object.entries(s.cats).forEach(([cat,d])=>{
+            if(!allCats[cat]) allCats[cat]={c:0,t:0};
+            allCats[cat].c+=d.c; allCats[cat].t+=d.t;
+        });});
+        if(Object.keys(allCats).length) {
+            html += '<div class="bg-white rounded-xl border border-toast/60 p-5"><h3 class="font-bold text-sm mb-4">Category performance (all time)</h3>';
+            Object.entries(allCats).sort((a,b)=>(a[1].c/a[1].t)-(b[1].c/b[1].t)).forEach(([cat,d])=>{
+                const pct=Math.round(d.c/d.t*100);
+                const color=pct>=75?'bg-moss':pct>=50?'bg-caramel':'bg-red-400';
+                html += `<div class="mb-3"><div class="flex justify-between text-xs mb-1"><span class="text-bark/60">${cat}</span><span class="text-bark/40">${pct}%</span></div>
+                <div class="w-full h-1.5 bg-toast/50 rounded-full overflow-hidden"><div class="${color} h-full rounded-full" style="width:${pct}%"></div></div></div>`;
+            });
+            html += '</div>';
+        }
+        document.getElementById('statsContent').innerHTML = html;
+    }
+
+    function renderQuickStats() {
+        const h = getHist();
+        if(!h.length){ document.getElementById('quickStats').innerHTML=''; return; }
+        const last = h[h.length-1];
+        const avg = Math.round(h.reduce((s,x)=>s+x.score,0)/h.length);
+        document.getElementById('quickStats').innerHTML = `
+            <div class="flex items-center gap-5 text-xs text-bark/40 mt-2">
+                <span>Last: <span class="${last.score>=75?'text-moss':'text-red-400'} font-medium">${last.score}%</span></span>
+                <span>Avg: <span class="text-bark/60 font-medium">${avg}%</span></span>
+                <span>${h.length} sessions</span>
+            </div>`;
+    }
+
+    // ============================================================
+    // EXAM LIST
+    // ============================================================
+    function buildExamList() {
+        const exams = {};
+        ALL_QS.forEach(q=>{ exams[q.exam_source]=(exams[q.exam_source]||0)+1; });
+        let html = '';
+        Object.entries(exams).sort((a,b)=>b[0].localeCompare(a[0])).forEach(([src,ct])=>{
+            html += `<div class="mode-card bg-white rounded-xl border border-toast/60 p-4 cursor-pointer" onclick="startPracticeTest('${src}')">
+                <div class="flex items-center justify-between">
+                    <div><h3 class="font-medium text-sm">${fmtExam(src)}</h3><p class="text-bark/40 text-xs mt-0.5">${ct} questions</p></div>
+                    <span class="text-bark/20">&rarr;</span>
+                </div>
+            </div>`;
+        });
+        document.getElementById('examList').innerHTML = html;
+    }
+
+    // ============================================================
+    // PERSISTENCE
+    // ============================================================
+    function saveHist(s){ const h=getHist(); h.push(s); localStorage.setItem('bagel_v2',JSON.stringify(h)); }
+    function getHist(){ try{return JSON.parse(localStorage.getItem('bagel_v2')||'[]');}catch{return[];} }
+
+    // ============================================================
+    // UTILS
+    // ============================================================
+    function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a; }
+    function fmtExam(s){ return s.replace(/_/g,' ').replace(/exam$/i,'').trim().replace(/october/i,'October').replace(/april/i,'April').replace(/may/i,'May'); }
+    function fmtDur(s){ if(s<60)return s+'s'; const m=Math.floor(s/60); if(m<60)return m+'m'; return Math.floor(m/60)+'h '+m%60+'m'; }
+
+    // Welcome quotes
+    const QUOTES = [
+        "The pass rate is somewhere between \"yikes\" and \"oh no.\" But you've got all the real exam questions and an open-book format. You just need to practice finding answers fast.",
+        "I could be on a walk right now. Instead I'm helping you learn about customs bonds. Let's make it count.",
+        "75% to pass. 60 out of 80. Sounds manageable until you're staring at four answers about transaction value. Practice makes it automatic.",
+        "The brokers who pass aren't smarter. They're faster at navigating the CFR. That's a skill you can build. Let's build it.",
+        "Dogs are classified under HTS 0106.19 as 'other live mammals.' Personally offensive. Anyway - pick a mode.",
+    ];
+    function setWelcome() {
+        const h=getHist();
+        document.getElementById('welcomeQuote').textContent = h.length?QUOTES[Math.floor(Math.random()*QUOTES.length)]:QUOTES[0];
+    }
+
+    // Keyboard
+    document.addEventListener('keydown',e=>{
+        if(document.getElementById('studyScreen').classList.contains('hidden')) return;
+        if(e.key==='ArrowLeft') goPrev();
+        if(e.key==='ArrowRight') goNext();
+        if(e.key>='1'&&e.key<='4') answer(['A','B','C','D'][+e.key-1]);
+    });
+
+    init();
+    </script>
 </body>
 </html>
