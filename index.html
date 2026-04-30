@@ -276,6 +276,7 @@
             <div class="flex gap-2 mb-8 flex-wrap">
                 <button onclick="showResourceTab('open-book')" class="resource-tab pill bg-espresso text-cream border border-espresso" data-tab="open-book">Open Book Materials</button>
                 <button onclick="showResourceTab('study-guide')" class="resource-tab pill bg-white text-bark/60 border border-toast/60" data-tab="study-guide">Study Guide</button>
+                <button onclick="showResourceTab('printables')" class="resource-tab pill bg-white text-bark/60 border border-toast/60" data-tab="printables">Printables</button>
                 <button onclick="showResourceTab('fun-facts')" class="resource-tab pill bg-white text-bark/60 border border-toast/60" data-tab="fun-facts">Fun Facts</button>
             </div>
 
@@ -534,6 +535,371 @@
 
                 <div class="bagel-says rounded-xl p-4">
                     <p class="text-bark/70 text-sm">The exam is open book but that's not the gift it sounds like. You have 270 minutes for 80 questions. Every second you spend flipping pages is a second you're not thinking. Know where things live.</p>
+                </div>
+            </div>
+
+            <!-- PRINTABLES TAB -->
+            <div id="tab-printables" class="resource-panel hidden">
+                <h3 class="font-display text-xl font-bold mb-2">Printable reference sheets</h3>
+                <p class="text-bark/50 text-sm mb-4">Print these. Tab them into your CFR binder. All sourced from current eCFR - not from past exams.</p>
+                <div class="bagel-says rounded-xl p-4 mb-8">
+                    <p class="text-bark/70 text-sm">These are navigation aids, not answer keys. Regulations change. The links go to the live eCFR so you're always looking at current law.</p>
+                </div>
+
+                <!-- 1. TIMELINES REFERENCE -->
+                <div class="mb-12">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-base">Timelines & Deadlines</h4>
+                        <button onclick="window.print()" class="text-xs text-caramel hover:text-espresso transition">🖨️ Print</button>
+                    </div>
+                    <p class="text-bark/50 text-xs mb-4">Every critical deadline with the actual CFR cite. Verify against current eCFR before exam day.</p>
+
+                    <div class="space-y-2">
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Entry filing</p>
+                                <p class="text-bark/50 text-xs">Within 15 calendar days of arrival of merchandise</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-142.2" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§142.2</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Entry summary filing</p>
+                                <p class="text-bark/50 text-xs">Within 10 working days of entry</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-142.12" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§142.12</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Protest filing</p>
+                                <p class="text-bark/50 text-xs">Within 180 days after date of liquidation</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-174.12" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§174.12</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Liquidation</p>
+                                <p class="text-bark/50 text-xs">Within 314 days of entry (or date of final court decision)</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-159.9" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§159.9</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Record retention</p>
+                                <p class="text-bark/50 text-xs">5 years from date of entry</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-163.4" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§163.4</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Triennial status report</p>
+                                <p class="text-bark/50 text-xs">Every 3 years (February 1 of reporting year)</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-111.30" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§111.30</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Broker license exam</p>
+                                <p class="text-bark/50 text-xs">Offered in April and October each year</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-111.11" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§111.11</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Drawback claim</p>
+                                <p class="text-bark/50 text-xs">Within 5 years of importation of designated merchandise</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-190.51" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§190.51</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">FP&F petition</p>
+                                <p class="text-bark/50 text-xs">Within 60 days from date of mailing of notice of penalty</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-171.2" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§171.2</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Broker change notification</p>
+                                <p class="text-bark/50 text-xs">Within 30 days of change (address, name, organization)</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-111.30" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§111.30</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Temporary importation bond (TIB)</p>
+                                <p class="text-bark/50 text-xs">1 year, extendable up to 3 years total</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-10.31" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§10.31</a>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3 flex items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="font-medium text-sm">Warehouse entry</p>
+                                <p class="text-bark/50 text-xs">Merchandise may remain in bonded warehouse up to 5 years from date of importation</p>
+                            </div>
+                            <a href="https://www.ecfr.gov/current/title-19/section-144.41" target="_blank" class="text-xs text-caramel hover:underline shrink-0">§144.41</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. CFR NAVIGATION GUIDE -->
+                <div class="mb-12">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-base">CFR Navigation Guide</h4>
+                        <button onclick="window.print()" class="text-xs text-caramel hover:text-espresso transition">🖨️ Print</button>
+                    </div>
+                    <p class="text-bark/50 text-xs mb-4">"For questions about X, start at Part Y." A map of the CFR structure for fast lookup.</p>
+
+                    <div class="space-y-2">
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Broker licensing, duties, ethics</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-111" target="_blank" class="text-xs text-caramel hover:underline">Part 111</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Customs bonds</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-113" target="_blank" class="text-xs text-caramel hover:underline">Part 113</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Intellectual property (trademarks, copyrights)</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-133" target="_blank" class="text-xs text-caramel hover:underline">Part 133</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Country of origin marking</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-134" target="_blank" class="text-xs text-caramel hover:underline">Part 134</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Entry of merchandise</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-141" target="_blank" class="text-xs text-caramel hover:underline">Part 141</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Entry process and documentation</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-142" target="_blank" class="text-xs text-caramel hover:underline">Part 142</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Bonded warehouses</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-144" target="_blank" class="text-xs text-caramel hover:underline">Part 144</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Classification and appraisement (valuation)</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-152" target="_blank" class="text-xs text-caramel hover:underline">Part 152</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Liquidation of duties</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-159" target="_blank" class="text-xs text-caramel hover:underline">Part 159</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Recordkeeping</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-163" target="_blank" class="text-xs text-caramel hover:underline">Part 163</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Fines, penalties, forfeitures</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-171" target="_blank" class="text-xs text-caramel hover:underline">Part 171</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Protests</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-174" target="_blank" class="text-xs text-caramel hover:underline">Part 174</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Drawback</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-190" target="_blank" class="text-xs text-caramel hover:underline">Part 190</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Foreign trade zones</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-146" target="_blank" class="text-xs text-caramel hover:underline">Part 146</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Quotas</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-132" target="_blank" class="text-xs text-caramel hover:underline">Part 132</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg border border-toast/60 p-3">
+                            <div class="flex items-center justify-between">
+                                <span class="font-medium text-sm">Transportation in bond</span>
+                                <a href="https://www.ecfr.gov/current/title-19/part-18" target="_blank" class="text-xs text-caramel hover:underline">Part 18</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. GRI DECISION FLOW -->
+                <div class="mb-12">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-base">GRI Decision Flow</h4>
+                        <button onclick="window.print()" class="text-xs text-caramel hover:text-espresso transition">🖨️ Print</button>
+                    </div>
+                    <p class="text-bark/50 text-xs mb-4">The 6 General Rules of Interpretation, applied in order. This is the legal framework for all classification. Source: General Notes to the HTSUS.</p>
+
+                    <div class="space-y-3">
+                        <div class="bg-white rounded-xl border-l-4 border-caramel p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-caramel text-sm shrink-0">GRI 1</span>
+                                <div>
+                                    <p class="font-medium text-sm mb-1">Headings, Section Notes, Chapter Notes</p>
+                                    <p class="text-bark/50 text-xs">Classification determined by the terms of the headings and relative section/chapter notes. This resolves MOST questions. Start here always.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓ only if GRI 1 doesn't resolve</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-caramel/70 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-caramel/70 text-sm shrink-0">GRI 2</span>
+                                <div>
+                                    <p class="font-medium text-sm mb-1">Incomplete/unfinished articles; Mixtures and combinations</p>
+                                    <p class="text-bark/50 text-xs">(a) Incomplete or unfinished articles classified as if complete, if they have the essential character. (b) Mixtures/combinations of materials - refer to GRI 3.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓ only if GRI 2 doesn't resolve</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-caramel/60 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-caramel/60 text-sm shrink-0">GRI 3</span>
+                                <div>
+                                    <p class="font-medium text-sm mb-1">Two or more headings apply</p>
+                                    <p class="text-bark/50 text-xs">(a) Most specific heading preferred over general. (b) Mixtures/composites: essential character determines classification. (c) If (a) and (b) fail: last in numerical order.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓ only if GRI 3 doesn't resolve</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-bark/20 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-bark/40 text-sm shrink-0">GRI 4</span>
+                                <div>
+                                    <p class="font-medium text-sm mb-1">Most akin</p>
+                                    <p class="text-bark/50 text-xs">Goods classified under the heading for goods to which they are most akin (most similar).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-bark/20 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-bark/40 text-sm shrink-0">GRI 5</span>
+                                <div>
+                                    <p class="font-medium text-sm mb-1">Containers and packing</p>
+                                    <p class="text-bark/50 text-xs">(a) Cases, boxes, and similar containers: classified with the article if of a kind normally sold with it. (b) Packing materials: classified with the article unless clearly reusable.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-bark/20 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-bark/40 text-sm shrink-0">GRI 6</span>
+                                <div>
+                                    <p class="font-medium text-sm mb-1">Subheading classification</p>
+                                    <p class="text-bark/50 text-xs">Classification at the subheading level follows the same rules (GRI 1-5) applied at that level. Compare only subheadings at the same level.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. VALUATION METHODS -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="font-bold text-base">Valuation Methods Hierarchy</h4>
+                        <button onclick="window.print()" class="text-xs text-caramel hover:text-espresso transition">🖨️ Print</button>
+                    </div>
+                    <p class="text-bark/50 text-xs mb-4">Applied in strict order. You can only move to the next method if the previous one cannot be used. Source: <a href="https://www.ecfr.gov/current/title-19/part-152/subpart-E" target="_blank" class="text-caramel hover:underline">19 CFR 152 Subpart E</a>.</p>
+
+                    <div class="space-y-3">
+                        <div class="bg-white rounded-xl border-l-4 border-moss p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-moss text-sm shrink-0">1</span>
+                                <div>
+                                    <p class="font-medium text-sm">Transaction value</p>
+                                    <p class="text-bark/50 text-xs">Price actually paid or payable, plus statutory additions (assists, royalties, packing, proceeds). This is the PRIMARY method - always try first.</p>
+                                    <a href="https://www.ecfr.gov/current/title-19/section-152.103" target="_blank" class="text-xs text-caramel hover:underline">§152.103</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓ only if transaction value can't be determined</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-moss/70 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-moss/70 text-sm shrink-0">2</span>
+                                <div>
+                                    <p class="font-medium text-sm">Transaction value of identical merchandise</p>
+                                    <p class="text-bark/50 text-xs">Same merchandise, same country of origin, same commercial level, approximately same time.</p>
+                                    <a href="https://www.ecfr.gov/current/title-19/section-152.104" target="_blank" class="text-xs text-caramel hover:underline">§152.104</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-moss/60 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-moss/60 text-sm shrink-0">3</span>
+                                <div>
+                                    <p class="font-medium text-sm">Transaction value of similar merchandise</p>
+                                    <p class="text-bark/50 text-xs">Not identical but closely resembling in characteristics, materials, function. Same country, same time.</p>
+                                    <a href="https://www.ecfr.gov/current/title-19/section-152.104" target="_blank" class="text-xs text-caramel hover:underline">§152.104</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓ (Methods 4 & 5 can be applied in either order at importer's request)</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-bark/30 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-bark/40 text-sm shrink-0">4</span>
+                                <div>
+                                    <p class="font-medium text-sm">Deductive value</p>
+                                    <p class="text-bark/50 text-xs">Based on resale price in the U.S., minus deductions (commissions, transport, duties, profit).</p>
+                                    <a href="https://www.ecfr.gov/current/title-19/section-152.105" target="_blank" class="text-xs text-caramel hover:underline">§152.105</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-bark/30 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-bark/40 text-sm shrink-0">5</span>
+                                <div>
+                                    <p class="font-medium text-sm">Computed value</p>
+                                    <p class="text-bark/50 text-xs">Built-up cost: materials + fabrication + profit + general expenses in country of production.</p>
+                                    <a href="https://www.ecfr.gov/current/title-19/section-152.106" target="_blank" class="text-xs text-caramel hover:underline">§152.106</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><span class="text-bark/20 text-xs">↓ last resort</span></div>
+                        <div class="bg-white rounded-xl border-l-4 border-bark/20 p-4">
+                            <div class="flex items-start gap-3">
+                                <span class="font-bold text-bark/30 text-sm shrink-0">6</span>
+                                <div>
+                                    <p class="font-medium text-sm">Fallback (derived from Methods 1-5)</p>
+                                    <p class="text-bark/50 text-xs">Reasonable means consistent with the principles of Methods 1-5, applied flexibly. Cannot use: arbitrary values, minimum values, domestic selling prices, or "higher of two alternatives."</p>
+                                    <a href="https://www.ecfr.gov/current/title-19/section-152.107" target="_blank" class="text-xs text-caramel hover:underline">§152.107</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bagel-says rounded-xl p-4">
+                    <p class="text-bark/70 text-sm">Print these, tab them into your binder, and practice finding the CFR sections they reference. On exam day you won't have time to think about where things are. You'll just flip.</p>
                 </div>
             </div>
 
