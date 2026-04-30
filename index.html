@@ -128,10 +128,17 @@
             </div>
 
             <!-- Bagel Quote -->
-            <div class="bagel-says rounded-2xl p-5 mb-12 fade-in-d2">
+            <div class="bagel-says rounded-2xl p-5 mb-6 fade-in-d2">
                 <p class="text-bark/80 text-[15px] leading-relaxed italic" id="welcomeQuote">
                     The pass rate is somewhere between "yikes" and "oh no." But you've got all the real exam questions and an open-book format. You just need to practice finding answers fast.
                 </p>
+            </div>
+
+            <!-- Walk Around the Site -->
+            <div class="mb-12 fade-in-d2">
+                <button onclick="showWalkthrough()" class="text-sm text-caramel hover:text-espresso transition font-medium flex items-center gap-2">
+                    🐕 Want to go for a walk around the site first?
+                </button>
             </div>
 
             <!-- Modes -->
@@ -257,6 +264,138 @@
 
             <div id="categoryResults" class="mb-10"></div>
             <div id="missedReview"></div>
+        </div>
+
+        <!-- WALKTHROUGH -->
+        <div id="walkthroughScreen" class="hidden">
+            <button onclick="showHome()" class="text-sm text-bark/50 hover:text-espresso transition mb-8 flex items-center gap-1">&larr; Home</button>
+
+            <h2 class="font-display text-3xl font-bold mb-3">The walk</h2>
+            <p class="text-bark/60 mb-10">Here's how the exam works, how to get your license, and how this site helps you get there.</p>
+
+            <!-- What is the CBLE -->
+            <div class="mb-10">
+                <h3 class="font-display text-xl font-bold mb-3">The exam</h3>
+                <p class="text-bark/60 text-sm leading-relaxed mb-4">
+                    The Customs Broker License Examination (CBLE) is offered twice a year - April and October. It's 80 multiple-choice questions in 4.5 hours. Open book. You need 75% to pass (60 out of 80).
+                </p>
+                <p class="text-bark/60 text-sm leading-relaxed mb-4">
+                    "Open book" sounds generous until you realize the pass rate averages around 15%. The questions are designed so that knowing where to find the answer matters more than memorizing it. You're allowed to bring Title 19 CFR, the Harmonized Tariff Schedule, and ACE documents. The people who pass are fast navigators, not encyclopedias.
+                </p>
+            </div>
+
+            <!-- Path to license -->
+            <div class="mb-10">
+                <h3 class="font-display text-xl font-bold mb-3">Path to your license</h3>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-full bg-caramel/10 border border-caramel/20 flex items-center justify-center text-sm font-bold text-caramel">1</div>
+                        <div>
+                            <p class="font-medium text-sm">Study the material</p>
+                            <p class="text-bark/50 text-xs mt-1">Get your printed CFR and HTS. Tab them. Use this site to practice with real exam questions and learn where things live in the regulations.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-full bg-caramel/10 border border-caramel/20 flex items-center justify-center text-sm font-bold text-caramel">2</div>
+                        <div>
+                            <p class="font-medium text-sm">Register for the exam</p>
+                            <p class="text-bark/50 text-xs mt-1">CBP opens registration a few months before each exam. Seats fill up. Register early at <a href="https://www.cbp.gov/trade/programs-administration/customs-brokers/license-examination-notice-examination/registration-information" target="_blank" class="text-caramel hover:underline">cbp.gov</a>. Fee is around $390.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-full bg-caramel/10 border border-caramel/20 flex items-center justify-center text-sm font-bold text-caramel">3</div>
+                        <div>
+                            <p class="font-medium text-sm">Take the exam</p>
+                            <p class="text-bark/50 text-xs mt-1">4.5 hours, 80 questions, open book. Bring your tabbed CFR, HTS, calculator, highlighters. Time management is everything.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-full bg-caramel/10 border border-caramel/20 flex items-center justify-center text-sm font-bold text-caramel">4</div>
+                        <div>
+                            <p class="font-medium text-sm">Pass with 75%+</p>
+                            <p class="text-bark/50 text-xs mt-1">Results come out a few weeks later. If you pass, you move to the application phase.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-full bg-caramel/10 border border-caramel/20 flex items-center justify-center text-sm font-bold text-caramel">5</div>
+                        <div>
+                            <p class="font-medium text-sm">Apply for your license</p>
+                            <p class="text-bark/50 text-xs mt-1">Submit CBP Form 3124 (Application for Customs Broker License). Includes background check, fingerprinting, and character references. Processing takes several months.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-8 h-8 rounded-full bg-caramel/10 border border-caramel/20 flex items-center justify-center text-sm font-bold text-caramel">6</div>
+                        <div>
+                            <p class="font-medium text-sm">Get licensed</p>
+                            <p class="text-bark/50 text-xs mt-1">Once approved, you hold a national customs broker license. Maintain it with triennial status reports (every 3 years) and continuing education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to study -->
+            <div class="mb-10">
+                <h3 class="font-display text-xl font-bold mb-3">How to study</h3>
+                <p class="text-bark/60 text-sm leading-relaxed mb-4">
+                    This isn't a memorization exam. It's a navigation exam. Your job is to know the material well enough to find the exact answer in your reference books within 3 minutes.
+                </p>
+                <div class="bg-warm rounded-xl p-5 space-y-3 mb-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-caramel font-bold text-sm shrink-0">→</span>
+                        <p class="text-bark/70 text-sm"><span class="font-medium">Weeks 1-2:</span> Read through the CFR parts that matter most (111, 141, 142, 152, 113). Don't memorize - get familiar with the structure.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-caramel font-bold text-sm shrink-0">→</span>
+                        <p class="text-bark/70 text-sm"><span class="font-medium">Weeks 3-4:</span> Start doing practice questions in Free Study mode. When you get one wrong, look up the regulation. Tab that section.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-caramel font-bold text-sm shrink-0">→</span>
+                        <p class="text-bark/70 text-sm"><span class="font-medium">Weeks 5-6:</span> Take full practice tests (80 questions). Track your time. Identify which categories are weakest and drill those.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="text-caramel font-bold text-sm shrink-0">→</span>
+                        <p class="text-bark/70 text-sm"><span class="font-medium">Week 7+:</span> Speed rounds daily. Practice tests weekly. Focus on getting your lookup time under 2 minutes per question.</p>
+                    </div>
+                </div>
+                <p class="text-bark/60 text-sm leading-relaxed">
+                    The goal isn't to know every regulation by heart. It's to know where everything lives so you can find it fast under pressure.
+                </p>
+            </div>
+
+            <!-- How this site helps -->
+            <div class="mb-10">
+                <h3 class="font-display text-xl font-bold mb-3">How this site helps</h3>
+                <div class="space-y-3">
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-medium text-sm mb-1">Speed Round</p>
+                        <p class="text-bark/50 text-xs">10-minute timer, random questions. Builds your ability to read, decide, and move on quickly. Use this daily once you're in study mode.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-medium text-sm mb-1">Free Study</p>
+                        <p class="text-bark/50 text-xs">All 293 questions, no timer. When you get one wrong, you'll see the regulation reference and a tip about what to look for. Use this to learn the material.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-medium text-sm mb-1">Practice Test</p>
+                        <p class="text-bark/50 text-xs">80 questions - either a random mix or a specific past exam. Simulates the real thing. Take these weekly to gauge readiness. 75% consistently = you're ready.</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-toast/60 p-4">
+                        <p class="font-medium text-sm mb-1">Resources & Printables</p>
+                        <p class="text-bark/50 text-xs">Study guide, CFR navigation map, GRI decision flow, valuation hierarchy, timelines - all linked to the live eCFR. Print them and tab them into your binder.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bagel's take -->
+            <div class="bagel-says rounded-2xl p-5">
+                <p class="text-bark/70 text-sm leading-relaxed">
+                    Here's the thing about this exam: it's hard, but it's not mysterious. The questions come from the CFR. The answers are in the CFR. Your job is to connect the two faster than the clock runs out. People overthink this. Get your books, tab them, practice finding things, and take every past exam you can get your hands on. That's it. That's the whole strategy.
+                </p>
+                <p class="text-bark/70 text-sm mt-3">Now go pick a study mode. I'll be here.</p>
+            </div>
+
+            <div class="mt-8 text-center">
+                <button onclick="showHome()" class="bg-espresso text-cream px-6 py-3 rounded-xl font-medium text-sm hover:bg-bark transition">Start studying</button>
+            </div>
         </div>
 
         <!-- STATS -->
@@ -1039,8 +1178,13 @@
     // NAVIGATION
     // ============================================================
     function hideAll() {
-        ['homeScreen','testSetup','studyScreen','resultsScreen','statsScreen','resourcesScreen']
+        ['homeScreen','testSetup','studyScreen','resultsScreen','statsScreen','resourcesScreen','walkthroughScreen']
             .forEach(id => document.getElementById(id).classList.add('hidden'));
+    }
+
+    function showWalkthrough() {
+        hideAll();
+        document.getElementById('walkthroughScreen').classList.remove('hidden');
     }
 
     function showResourceTab(tab) {
